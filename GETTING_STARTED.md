@@ -1,6 +1,6 @@
 # 快速获取与运行（给队友）
 
-当前仓库位于本机（尚未推送远端）: `C:/Users/ASUS/Downloads/YA_MCPServer_Template/YA_MCPServer_Template`，当前分支：`dev`。
+当前仓库位于本机（尚未推送远端）: `<local-repo-path>`，当前分支：`dev`。
 
 下面是两类命令，供你或队友拷贝执行：
 
