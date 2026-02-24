@@ -27,6 +27,11 @@ jobs:
           python -m pip install pytest httpx
           python -m pip install black flake8
 
+      - name: Install package
+        run: |
+          # Install the repo package so tests can import `mcp` and other modules
+          python -m pip install -e .
+
       - name: Run tests
         run: python -m pytest -q
 
