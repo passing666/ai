@@ -56,7 +56,26 @@ async def generate(
             async with httpx.AsyncClient(timeout=timeout) as client:
                 resp = await client.post(url, json=payload, headers=headers)
                 resp.raise_for_status()
-                return resp.json()
+                data = resp.json()
+                # Normalize chat/completion style responses into {'answer': str, 'sources': []}
+                if isinstance(data, dict):
+                    # If Deepseek returned chat.completion structure, extract assistant message
+                    choices = data.get("choices")
+                    if choices and isinstance(choices, list):
+                        first = choices[0]
+                        # support both {"message": {"content": ...}} and legacy {"text": ...}
+                        msg = first.get("message") if isinstance(first, dict) else None
+                        content = None
+                        if isinstance(msg, dict):
+                            content = msg.get("content")
+                        if not content:
+                            content = first.get("text") if isinstance(first, dict) else None
+                        if content:
+                            return {"answer": content, **{k: v for k, v in data.items() if k != "choices"}}
+                    # If API already returns {'answer': ...}, pass through
+                    if "answer" in data:
+                        return data
+                return data
         except httpx.HTTPStatusError as e:
             logger.exception("Deepseek API returned HTTP error on attempt %s", attempt)
             status = getattr(e.response, "status_code", None)
