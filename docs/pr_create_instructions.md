@@ -6,7 +6,7 @@
 
 ```bash
 # 切换到仓库根
-cd "C:/Users/ASUS/Downloads/YA_MCPServer_Template/YA_MCPServer_Template"
+cd path/to/your/repository/root
 
 # 创建并切换到新分支
 git checkout -b fix/deepseek-chat-payload
