@@ -4,6 +4,7 @@ This script invokes `tools.answer_tool.answer_sync` with a mocked Deepseek
 generate implementation to produce a deterministic natural-language answer.
 It writes the result to `out/demo_result.json` for CI artifact upload or manual inspection.
 """
+
 import json
 import os
 import asyncio
