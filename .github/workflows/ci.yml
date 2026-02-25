@@ -32,6 +32,11 @@ jobs:
           # Install the repo package so tests can import `mcp` and other modules
           python -m pip install -e .
 
+      - name: Install async test plugins
+        run: |
+          python -m pip install pytest-asyncio anyio
+
+          
       - name: Run tests
         env:
           PYTHONPATH: ${{ github.workspace }}
