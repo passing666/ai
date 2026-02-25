@@ -1,0 +1,89 @@
+﻿2026-02-25T06:52:54.6785087Z ##[group]Run python -m pip install --upgrade pip
+2026-02-25T06:52:54.6785520Z [36;1mpython -m pip install --upgrade pip[0m
+2026-02-25T06:52:54.6785819Z [36;1mpython -m pip install pytest httpx[0m
+2026-02-25T06:52:54.6786112Z [36;1mpython -m pip install black flake8[0m
+2026-02-25T06:52:54.6820029Z shell: /usr/bin/bash -e {0}
+2026-02-25T06:52:54.6820303Z env:
+2026-02-25T06:52:54.6820553Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:54.6820968Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T06:52:54.6821378Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:54.6821730Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:54.6822088Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:54.6822446Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T06:52:54.6822745Z ##[endgroup]
+2026-02-25T06:52:55.0186556Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (26.0.1)
+2026-02-25T06:52:55.5692383Z Collecting pytest
+2026-02-25T06:52:55.6295160Z   Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+2026-02-25T06:52:55.6497650Z Collecting httpx
+2026-02-25T06:52:55.6535663Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-02-25T06:52:55.6680734Z Collecting iniconfig>=1.0.1 (from pytest)
+2026-02-25T06:52:55.6724205Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-02-25T06:52:55.6868752Z Collecting packaging>=22 (from pytest)
+2026-02-25T06:52:55.6904355Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-25T06:52:55.7026531Z Collecting pluggy<2,>=1.5 (from pytest)
+2026-02-25T06:52:55.7060880Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-02-25T06:52:55.7238147Z Collecting pygments>=2.7.2 (from pytest)
+2026-02-25T06:52:55.7274573Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2026-02-25T06:52:55.7457485Z Collecting anyio (from httpx)
+2026-02-25T06:52:55.7560992Z   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+2026-02-25T06:52:55.7808438Z Collecting certifi (from httpx)
+2026-02-25T06:52:55.7845003Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-02-25T06:52:55.8003434Z Collecting httpcore==1.* (from httpx)
+2026-02-25T06:52:55.8038046Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-02-25T06:52:55.8200368Z Collecting idna (from httpx)
+2026-02-25T06:52:55.8234625Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-02-25T06:52:55.8343275Z Collecting h11>=0.16 (from httpcore==1.*->httpx)
+2026-02-25T06:52:55.8375711Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-02-25T06:52:55.8555005Z Collecting typing_extensions>=4.5 (from anyio->httpx)
+2026-02-25T06:52:55.8587645Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-25T06:52:55.8682947Z Downloading pytest-9.0.2-py3-none-any.whl (374 kB)
+2026-02-25T06:52:55.8822490Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-02-25T06:52:55.8873907Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-02-25T06:52:55.8929997Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-02-25T06:52:55.8986480Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-02-25T06:52:55.9039078Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-02-25T06:52:55.9089962Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+2026-02-25T06:52:55.9149369Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2026-02-25T06:52:55.9275937Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 101.7 MB/s  0:00:00
+2026-02-25T06:52:55.9311062Z Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+2026-02-25T06:52:55.9366363Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-02-25T06:52:55.9425317Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-02-25T06:52:55.9480894Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-02-25T06:52:55.9833467Z Installing collected packages: typing_extensions, pygments, pluggy, packaging, iniconfig, idna, h11, certifi, pytest, httpcore, anyio, httpx
+2026-02-25T06:52:57.2494923Z 
+2026-02-25T06:52:57.2507647Z Successfully installed anyio-4.12.1 certifi-2026.2.25 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pygments-2.19.2 pytest-9.0.2 typing_extensions-4.15.0
+2026-02-25T06:52:57.7540596Z Collecting black
+2026-02-25T06:52:57.8096198Z   Downloading black-26.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (88 kB)
+2026-02-25T06:52:57.8606191Z Collecting flake8
+2026-02-25T06:52:57.8647470Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2026-02-25T06:52:57.8808864Z Collecting click>=8.0.0 (from black)
+2026-02-25T06:52:57.8846704Z   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-02-25T06:52:57.8960698Z Collecting mypy-extensions>=0.4.3 (from black)
+2026-02-25T06:52:57.8998281Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2026-02-25T06:52:57.9053294Z Requirement already satisfied: packaging>=22.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black) (26.0)
+2026-02-25T06:52:57.9261133Z Collecting pathspec>=1.0.0 (from black)
+2026-02-25T06:52:57.9298637Z   Downloading pathspec-1.0.4-py3-none-any.whl.metadata (13 kB)
+2026-02-25T06:52:57.9484764Z Collecting platformdirs>=2 (from black)
+2026-02-25T06:52:57.9526384Z   Downloading platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-02-25T06:52:57.9678879Z Collecting pytokens>=0.3.0 (from black)
+2026-02-25T06:52:57.9716655Z   Downloading pytokens-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-02-25T06:52:57.9842911Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+2026-02-25T06:52:57.9876048Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2026-02-25T06:52:57.9988577Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8)
+2026-02-25T06:52:58.0024982Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-02-25T06:52:58.0154609Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8)
+2026-02-25T06:52:58.0189615Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-02-25T06:52:58.0286253Z Downloading black-26.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2026-02-25T06:52:58.0415472Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 163.7 MB/s  0:00:00
+2026-02-25T06:52:58.0472710Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2026-02-25T06:52:58.0531261Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-02-25T06:52:58.0587556Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-02-25T06:52:58.0648099Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2026-02-25T06:52:58.0714597Z Downloading click-8.3.1-py3-none-any.whl (108 kB)
+2026-02-25T06:52:58.0777568Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-02-25T06:52:58.0839357Z Downloading pathspec-1.0.4-py3-none-any.whl (55 kB)
+2026-02-25T06:52:58.0903815Z Downloading platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-02-25T06:52:58.1000164Z Downloading pytokens-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (260 kB)
+2026-02-25T06:52:58.1494026Z Installing collected packages: pytokens, pyflakes, pycodestyle, platformdirs, pathspec, mypy-extensions, mccabe, click, flake8, black
+2026-02-25T06:52:58.5162332Z 
+2026-02-25T06:52:58.5178369Z Successfully installed black-26.1.0 click-8.3.1 flake8-7.3.0 mccabe-0.7.0 mypy-extensions-1.1.0 pathspec-1.0.4 platformdirs-4.9.2 pycodestyle-2.14.0 pyflakes-3.4.0 pytokens-0.4.1

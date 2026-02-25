@@ -1,0 +1,47 @@
+﻿2026-02-25T06:54:28.6229582Z ##[group]Run python -m pytest -q
+2026-02-25T06:54:28.6229900Z [36;1mpython -m pytest -q[0m
+2026-02-25T06:54:28.6260840Z shell: /usr/bin/bash -e {0}
+2026-02-25T06:54:28.6261075Z env:
+2026-02-25T06:54:28.6261322Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:54:28.6261747Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T06:54:28.6262180Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:54:28.6262731Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:54:28.6263104Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:54:28.6263474Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T06:54:28.6263802Z   PYTHONPATH: /home/runner/work/ai/ai
+2026-02-25T06:54:28.6264042Z ##[endgroup]
+2026-02-25T06:54:30.3780221Z ......F.......                                                           [100%]
+2026-02-25T06:54:30.3781337Z =================================== FAILURES ===================================
+2026-02-25T06:54:30.3782035Z ________________________ test_generate_retries_success _________________________
+2026-02-25T06:54:30.3782582Z 
+2026-02-25T06:54:30.3783041Z monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f3c2024b190>
+2026-02-25T06:54:30.3783733Z 
+2026-02-25T06:54:30.3783950Z     @pytest.mark.asyncio
+2026-02-25T06:54:30.3784558Z     async def test_generate_retries_success(monkeypatch):
+2026-02-25T06:54:30.3785458Z         monkeypatch.setattr(httpx, "AsyncClient", MockAsyncClient)
+2026-02-25T06:54:30.3786371Z >       res = await deepseek_client.generate("prompt", retries=2)
+2026-02-25T06:54:30.3787120Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T06:54:30.3787780Z 
+2026-02-25T06:54:30.3787947Z tests/test_deepseek_retry.py:45: 
+2026-02-25T06:54:30.3788331Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-02-25T06:54:30.3788719Z utils/deepseek_client.py:39: in generate
+2026-02-25T06:54:30.3789038Z     api_key = _get_api_key()
+2026-02-25T06:54:30.3789286Z               ^^^^^^^^^^^^^^
+2026-02-25T06:54:30.3789599Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-02-25T06:54:30.3789872Z 
+2026-02-25T06:54:30.3790008Z     def _get_api_key() -> str:
+2026-02-25T06:54:30.3790514Z         """Read DEEPSEEK_API_KEY from environment at call time and raise a friendly error if missing."""
+2026-02-25T06:54:30.3791079Z         key = os.getenv("DEEPSEEK_API_KEY")
+2026-02-25T06:54:30.3791375Z         if not key:
+2026-02-25T06:54:30.3791608Z >           raise DeepseekError(
+2026-02-25T06:54:30.3792010Z                 "DEEPSEEK_API_KEY not found. Set it in environment or in a .env file."
+2026-02-25T06:54:30.3792442Z             )
+2026-02-25T06:54:30.3792950Z E           utils.deepseek_client.DeepseekError: DEEPSEEK_API_KEY not found. Set it in environment or in a .env file.
+2026-02-25T06:54:30.3793470Z 
+2026-02-25T06:54:30.3793590Z utils/deepseek_client.py:17: DeepseekError
+2026-02-25T06:54:30.3794018Z ------------------------------ Captured log setup ------------------------------
+2026-02-25T06:54:30.3794537Z DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+2026-02-25T06:54:30.3795033Z =========================== short test summary info ============================
+2026-02-25T06:54:30.3796122Z FAILED tests/test_deepseek_retry.py::test_generate_retries_success - utils.deepseek_client.DeepseekError: DEEPSEEK_API_KEY not found. Set it in environment or in a .env file.
+2026-02-25T06:54:30.3797017Z 1 failed, 13 passed in 0.95s
+2026-02-25T06:54:30.4534766Z ##[error]Process completed with exit code 1.
