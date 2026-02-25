@@ -41,6 +41,11 @@ class MockAsyncClient:
 
 @pytest.mark.asyncio
 async def test_generate_retries_success(monkeypatch):
+    # ensure circuit state is clean for this test
+    try:
+        deepseek_client._reset_circuit()
+    except Exception:
+        pass
     monkeypatch.setattr(httpx, "AsyncClient", MockAsyncClient)
     res = await deepseek_client.generate("prompt", retries=2)
     assert res.get("answer") == "success"
@@ -48,6 +53,11 @@ async def test_generate_retries_success(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_generate_4xx_no_retry(monkeypatch):
+    # ensure circuit state is clean for this test
+    try:
+        deepseek_client._reset_circuit()
+    except Exception:
+        pass
     class Client400(MockAsyncClient):
         async def post(self, url, json, headers):
             return MockResponse(status_code=400, json_data={"error": "bad"})

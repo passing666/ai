@@ -7,6 +7,11 @@ from utils import deepseek_client
 
 @pytest.mark.asyncio
 async def test_generate_raises_when_key_missing(monkeypatch):
+    # ensure circuit state is clean for this test
+    try:
+        deepseek_client._reset_circuit()
+    except Exception:
+        pass
     monkeypatch.delenv("DEEPSEEK_API_KEY", raising=False)
     with pytest.raises(deepseek_client.DeepseekError):
         await deepseek_client.generate("hello")
@@ -42,6 +47,11 @@ class DummyAsyncClient:
 
 @pytest.mark.asyncio
 async def test_generate_success(monkeypatch):
+    # ensure circuit state is clean for this test
+    try:
+        deepseek_client._reset_circuit()
+    except Exception:
+        pass
     monkeypatch.setenv("DEEPSEEK_API_KEY", "dummy_key")
 
     # monkeypatch httpx.AsyncClient used in deepseek_client
