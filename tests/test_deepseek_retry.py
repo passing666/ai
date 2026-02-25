@@ -58,6 +58,7 @@ async def test_generate_4xx_no_retry(monkeypatch):
         deepseek_client._reset_circuit()
     except Exception:
         pass
+
     class Client400(MockAsyncClient):
         async def post(self, url, json, headers):
             return MockResponse(status_code=400, json_data={"error": "bad"})

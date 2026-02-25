@@ -100,7 +100,9 @@ async def generate(
     while True:
         # check circuit breaker before attempt
         if _circuit_is_open():
-            raise DeepseekError("Deepseek circuit open (recent failures); request blocked")
+            raise DeepseekError(
+                "Deepseek circuit open (recent failures); request blocked"
+            )
         attempt += 1
         try:
             async with httpx.AsyncClient(timeout=timeout) as client:
