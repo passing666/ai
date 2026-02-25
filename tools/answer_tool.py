@@ -23,7 +23,12 @@ async def answer(q: str, limit: int = 4, use_reranker: bool = False) -> Dict[str
         # Fallback: return helpful error for early local testing
         logger.warning("aggregator_tool not available; returning placeholder result")
         docs = [
-            {"id": "local:placeholder-1", "title": "占位文档", "text": "占位文本：请实现 aggregator_tool", "score": 0.5}
+            {
+                "id": "local:placeholder-1",
+                "title": "占位文档",
+                "text": "占位文本：请实现 aggregator_tool",
+                "score": 0.5,
+            }
         ]
         provider_times = {}
     else:
@@ -102,8 +107,14 @@ async def answer(q: str, limit: int = 4, use_reranker: bool = False) -> Dict[str
         # Degraded response: return aggregated docs and note failure
         return {
             "answer": "抱歉，生成服务暂不可用；以下为聚合到的文档摘要。",
-            "citations": [ {"id": d.get("id"), "url": d.get("source_url") } for d in docs ],
-            "debug": {"providers_called": [], "provider_times_ms": {}, "deepseek_error": str(e)}
+            "citations": [
+                {"id": d.get("id"), "url": d.get("source_url")} for d in docs
+            ],
+            "debug": {
+                "providers_called": [],
+                "provider_times_ms": {},
+                "deepseek_error": str(e),
+            },
         }
 
     # Map deepseek response to expected format (assume keys 'answer' and optional 'sources')
@@ -111,7 +122,9 @@ async def answer(q: str, limit: int = 4, use_reranker: bool = False) -> Dict[str
     sources = ds_resp.get("sources") or []
 
     debug = {
-        "providers_called": list(provider_times.keys()) if isinstance(provider_times, dict) else [],
+        "providers_called": (
+            list(provider_times.keys()) if isinstance(provider_times, dict) else []
+        ),
         "provider_times_ms": provider_times if isinstance(provider_times, dict) else {},
         "deepseek_time_ms": deepseek_time_ms,
     }

@@ -2,6 +2,7 @@ from datetime import datetime
 import sys
 import logging
 from pathlib import Path
+
 try:
     from colorlog import ColoredFormatter  # optional; fall back if unavailable
 except Exception:  # pragma: no cover - optional dependency

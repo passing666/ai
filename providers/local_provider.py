@@ -2,7 +2,9 @@ import json
 import os
 from typing import List, Dict, Any
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "resources", "sample_data.json")
+DATA_PATH = os.path.join(
+    os.path.dirname(__file__), "..", "resources", "sample_data.json"
+)
 
 
 def _load_sample_items() -> List[Dict[str, Any]]:
@@ -24,13 +26,15 @@ def search(q: str, limit: int = 5) -> List[Dict[str, Any]]:
         title = str(it.get("title", ""))
         text = str(it.get("value", ""))
         score = 1.0 if q_low in title.lower() else 0.4
-        results.append({
-            "id": f"local:{it.get('id')}",
-            "title": title,
-            "text": text,
-            "score": score,
-            "source_url": None,
-            "metadata": {},
-        })
+        results.append(
+            {
+                "id": f"local:{it.get('id')}",
+                "title": title,
+                "text": text,
+                "score": score,
+                "source_url": None,
+                "metadata": {},
+            }
+        )
     results.sort(key=lambda x: x["score"], reverse=True)
     return results[:limit]

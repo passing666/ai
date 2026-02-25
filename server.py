@@ -105,7 +105,11 @@ class YA_MCPServer:
             routes=[
                 Route("/", endpoint=handle_sse),
                 Mount("/messages/", app=sse.handle_post_message),
-                Route("/api/aggregate_search", endpoint=self._http_aggregate_search, methods=["POST"]),
+                Route(
+                    "/api/aggregate_search",
+                    endpoint=self._http_aggregate_search,
+                    methods=["POST"],
+                ),
                 Route("/api/answer", endpoint=self._http_answer, methods=["POST"]),
             ],
         )

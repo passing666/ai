@@ -4,6 +4,7 @@ This implementation uses a small IDF-weighted overlap: it scores documents
 by summing term-frequency in the document for terms that appear in the
 question, weighted by IDF computed across the candidate set.
 """
+
 from __future__ import annotations
 
 import math

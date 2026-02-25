@@ -15,6 +15,7 @@ async def test_provider_times_logged_and_returned(caplog, monkeypatch):
     # patch aggregator
     importlib.import_module("tools.aggregator_tool")
     from tools import aggregator_tool as real_agg
+
     real_agg.search = fake_search
 
     async def fake_generate(prompt, *args, **kwargs):

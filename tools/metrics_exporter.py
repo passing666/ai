@@ -9,6 +9,7 @@ Usage examples:
   # run a simple HTTP server to serve the directory containing metrics file
   python tools/metrics_exporter.py --metrics-file ./metrics.txt --port 8001
 """
+
 from __future__ import annotations
 
 import argparse
@@ -38,7 +39,9 @@ def run_http_server(metrics_file: str, port: int = 8000) -> None:
     os.chdir(directory)
     Handler = http.server.SimpleHTTPRequestHandler
     with socketserver.TCPServer(("", port), Handler) as httpd:
-        print(f"Serving metrics at http://127.0.0.1:{port}/{os.path.basename(metrics_file)}")
+        print(
+            f"Serving metrics at http://127.0.0.1:{port}/{os.path.basename(metrics_file)}"
+        )
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
@@ -46,10 +49,19 @@ def run_http_server(metrics_file: str, port: int = 8000) -> None:
 
 
 def _main():
-    parser = argparse.ArgumentParser(description="Serve provider_times as Prometheus metrics")
-    parser.add_argument("--metrics-file", required=True, help="Path to metrics file to write/serve")
-    parser.add_argument("--provider-times-json", help="Optional JSON file with provider_times to write before serving")
-    parser.add_argument("--port", type=int, default=8000, help="Port to serve metrics on")
+    parser = argparse.ArgumentParser(
+        description="Serve provider_times as Prometheus metrics"
+    )
+    parser.add_argument(
+        "--metrics-file", required=True, help="Path to metrics file to write/serve"
+    )
+    parser.add_argument(
+        "--provider-times-json",
+        help="Optional JSON file with provider_times to write before serving",
+    )
+    parser.add_argument(
+        "--port", type=int, default=8000, help="Port to serve metrics on"
+    )
 
     args = parser.parse_args()
 

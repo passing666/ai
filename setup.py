@@ -1,6 +1,4 @@
-
 from setuptools import setup, find_packages
-
 
 setup(
     name="YA_MCPServer_YourTeam",

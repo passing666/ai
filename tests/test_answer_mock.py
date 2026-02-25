@@ -15,9 +15,11 @@ async def test_answer_with_mocked_dependencies(monkeypatch):
         return docs, provider_times
 
     import importlib
+
     at = importlib.import_module("tools.answer_tool")
     # attach a fake aggregator_tool object with a search coroutine
     from types import SimpleNamespace
+
     at.aggregator_tool = SimpleNamespace(search=fake_search)
 
     # mock deepseek_client.generate
@@ -25,6 +27,7 @@ async def test_answer_with_mocked_dependencies(monkeypatch):
         return {"answer": "这是生成的回答", "sources": [{"id": "d1"}, {"id": "d2"}]}
 
     import utils.deepseek_client as dsc
+
     monkeypatch.setattr(dsc, "generate", fake_generate)
 
     res = await at.answer("测试问题", limit=2)

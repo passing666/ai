@@ -5,6 +5,7 @@ Features:
 - Calls `tools.answer_tool.answer()` and prints JSON result + metrics lines.
 - Does not modify `server.py` or `modules/YA_Common`.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -19,10 +20,21 @@ async def run_demo(question: str, limit: int = 4, mode: str = "stub") -> Any:
     at = importlib.import_module("tools.answer_tool")
 
     if mode == "stub":
+
         async def fake_search(q, limit=4):
             docs = [
-                {"id": "stub:1", "title": "示例文档一", "text": "这是一段与问题相关的示例文本。", "score": 0.9},
-                {"id": "stub:2", "title": "示例文档二", "text": "另一段示例文本，相关性较低。", "score": 0.3},
+                {
+                    "id": "stub:1",
+                    "title": "示例文档一",
+                    "text": "这是一段与问题相关的示例文本。",
+                    "score": 0.9,
+                },
+                {
+                    "id": "stub:2",
+                    "title": "示例文档二",
+                    "text": "另一段示例文本，相关性较低。",
+                    "score": 0.3,
+                },
             ]
             provider_times = {"local_stub": 12.0}
             return docs, provider_times
@@ -46,10 +58,19 @@ async def run_demo(question: str, limit: int = 4, mode: str = "stub") -> Any:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Local adapter to demo backend answer flow")
+    parser = argparse.ArgumentParser(
+        description="Local adapter to demo backend answer flow"
+    )
     parser.add_argument("question", help="Question to ask the backend")
-    parser.add_argument("--limit", type=int, default=4, help="Number of docs to include")
-    parser.add_argument("--mode", choices=["stub", "real"], default="stub", help="Use stub aggregator or real aggregator")
+    parser.add_argument(
+        "--limit", type=int, default=4, help="Number of docs to include"
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["stub", "real"],
+        default="stub",
+        help="Use stub aggregator or real aggregator",
+    )
 
     args = parser.parse_args()
 

@@ -9,6 +9,7 @@ Usage:
 Notes:
 - Does not modify `server.py` or `modules/YA_Common`.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -18,7 +19,14 @@ import time
 from typing import Dict, Any
 
 
-def run(question: str, limit: int = 4, mode: str = "stub", metrics_file: str = "./metrics.txt", serve: bool = False, port: int = 8000) -> Dict[str, Any]:
+def run(
+    question: str,
+    limit: int = 4,
+    mode: str = "stub",
+    metrics_file: str = "./metrics.txt",
+    serve: bool = False,
+    port: int = 8000,
+) -> Dict[str, Any]:
     # Lazy imports to keep module lightweight
     import importlib
 
@@ -47,6 +55,7 @@ def run(question: str, limit: int = 4, mode: str = "stub", metrics_file: str = "
 
     # Optionally serve metrics file in background thread
     if serve:
+
         def _serve():
             try:
                 metrics_exporter.run_http_server(metrics_file, port=port)
@@ -64,16 +73,27 @@ def run(question: str, limit: int = 4, mode: str = "stub", metrics_file: str = "
 
 
 def _cli():
-    parser = argparse.ArgumentParser(description="Run E2E Inspector demo (stub or real)")
+    parser = argparse.ArgumentParser(
+        description="Run E2E Inspector demo (stub or real)"
+    )
     parser.add_argument("--question", required=True)
     parser.add_argument("--limit", type=int, default=4)
     parser.add_argument("--mode", choices=["stub", "real"], default="stub")
     parser.add_argument("--metrics-file", default="./metrics.txt")
-    parser.add_argument("--serve", action="store_true", help="Serve metrics file over HTTP")
+    parser.add_argument(
+        "--serve", action="store_true", help="Serve metrics file over HTTP"
+    )
     parser.add_argument("--port", type=int, default=8000)
 
     args = parser.parse_args()
-    inspector = run(args.question, limit=args.limit, mode=args.mode, metrics_file=args.metrics_file, serve=args.serve, port=args.port)
+    inspector = run(
+        args.question,
+        limit=args.limit,
+        mode=args.mode,
+        metrics_file=args.metrics_file,
+        serve=args.serve,
+        port=args.port,
+    )
     print(json.dumps(inspector, ensure_ascii=False, indent=2))
 
 

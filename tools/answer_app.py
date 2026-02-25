@@ -4,6 +4,7 @@ This module lazily creates a Starlette app if `starlette` is installed. If not
 installed, `create_app()` returns None so importing this module is safe in
 environments without server dependencies.
 """
+
 from __future__ import annotations
 
 from typing import Optional
@@ -38,7 +39,9 @@ def create_app(use_reranker_default: bool = False) -> Optional[object]:
         # call existing answer flow
         from tools import answer_tool
 
-        resp = await answer_tool.answer(question, limit=limit, use_reranker=use_reranker)
+        resp = await answer_tool.answer(
+            question, limit=limit, use_reranker=use_reranker
+        )
 
         # optionally filter debug fields if not requested
         if not debug and "debug" in resp:
@@ -46,7 +49,7 @@ def create_app(use_reranker_default: bool = False) -> Optional[object]:
 
         return JSONResponse(resp)
 
-    routes = [Route("/answer", handle_answer, methods=["POST"]) ]
+    routes = [Route("/answer", handle_answer, methods=["POST"])]
     app = Starlette(debug=False, routes=routes)
     return app
 

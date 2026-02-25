@@ -3,6 +3,7 @@
 Provides a simple Prometheus-like lines formatter and a JSON-friendly
 conversion function for `provider_times` produced by aggregator.
 """
+
 from __future__ import annotations
 
 from typing import Dict, Any
@@ -19,7 +20,9 @@ def provider_times_to_metrics_lines(provider_times: Dict[str, float]) -> str:
     for name, ms in provider_times.items():
         metric_name = f"provider_{name}_ms"
         # sanitize metric name: replace non-alnum with underscore
-        metric_name = "".join(c if c.isalnum() or c == '_' else '_' for c in metric_name)
+        metric_name = "".join(
+            c if c.isalnum() or c == "_" else "_" for c in metric_name
+        )
         lines.append(f"{metric_name} {float(ms)}")
     return "\n".join(lines)
 

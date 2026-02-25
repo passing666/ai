@@ -8,6 +8,7 @@
 - 提供 `load_dotenv` 来从项目根的 `.env` 文件加载到环境中（不依赖第三方库）。
 - `set_secret(..., persist=True)` 可将键写入或更新到 `.env`（仅在用户显式调用时执行）。
 """
+
 from __future__ import annotations
 
 import os
@@ -40,14 +41,16 @@ def load_dotenv(path: Optional[str] = None) -> None:
                     continue
                 k, v = line.split("=", 1)
                 k = k.strip()
-                v = v.strip().strip('\"')
+                v = v.strip().strip('"')
                 if k and k not in os.environ:
                     os.environ[k] = v
     except FileNotFoundError:
         return
 
 
-def set_secret(name: str, value: str, persist: bool = False, path: Optional[str] = None) -> None:
+def set_secret(
+    name: str, value: str, persist: bool = False, path: Optional[str] = None
+) -> None:
     """在运行时将密钥写入 `os.environ`，并可选地持久化到 `.env`。
 
     persist=True 时会在指定 `path`（或项目根 `.env`）中新增或更新对应项。

@@ -3,6 +3,7 @@
 This provider is best-effort: if `httpx` is not available or network fails,
 it returns an empty list so local testing remains deterministic.
 """
+
 from __future__ import annotations
 
 from typing import List, Dict, Any
@@ -57,14 +58,16 @@ async def search(q: str, limit: int = 5) -> List[Dict[str, Any]]:
                     continue
                 title = p.get("title")
                 extract = p.get("extract") or ""
-                out.append({
-                    "id": f"wikipedia:{pid}",
-                    "title": title,
-                    "text": extract,
-                    "score": 0.7,
-                    "source_url": f"https://zh.wikipedia.org/wiki/{title.replace(' ', '_')}",
-                    "metadata": {},
-                })
+                out.append(
+                    {
+                        "id": f"wikipedia:{pid}",
+                        "title": title,
+                        "text": extract,
+                        "score": 0.7,
+                        "source_url": f"https://zh.wikipedia.org/wiki/{title.replace(' ', '_')}",
+                        "metadata": {},
+                    }
+                )
             return out[:limit]
     except Exception:
         return []

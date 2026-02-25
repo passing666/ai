@@ -22,6 +22,7 @@ async def test_reranker_integration(monkeypatch):
     at.aggregator_tool = type("X", (), {"search": staticmethod(fake_search)})
 
     import utils.deepseek_client as dsc
+
     monkeypatch.setattr(dsc, "generate", fake_generate)
 
     # Call with reranker enabled - expect top doc to be one with more overlap

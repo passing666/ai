@@ -8,7 +8,12 @@ async def test_selection_prefers_score_and_overlap(monkeypatch):
 
     docs = [
         {"id": "d1", "title": "Low", "text": "unrelated content here", "score": 0.1},
-        {"id": "d2", "title": "High", "text": "this mentions QUERY several times: QUERY QUERY", "score": 0.2},
+        {
+            "id": "d2",
+            "title": "High",
+            "text": "this mentions QUERY several times: QUERY QUERY",
+            "score": 0.2,
+        },
     ]
 
     async def fake_search(q, limit=4):
@@ -16,6 +21,7 @@ async def test_selection_prefers_score_and_overlap(monkeypatch):
 
     importlib.import_module("tools.aggregator_tool")
     from tools import aggregator_tool as real_agg
+
     real_agg.search = fake_search
 
     import utils.deepseek_client as dsc

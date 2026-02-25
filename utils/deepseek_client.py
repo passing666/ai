@@ -21,7 +21,11 @@ def _get_api_key() -> str:
 
 
 def _get_endpoint(provided: str | None) -> str:
-    return provided or os.getenv("DEEPSEEK_ENDPOINT") or "https://api.deepseek.com/v1/chat/completions"
+    return (
+        provided
+        or os.getenv("DEEPSEEK_ENDPOINT")
+        or "https://api.deepseek.com/v1/chat/completions"
+    )
 
 
 async def generate(
@@ -46,7 +50,10 @@ async def generate(
     }
 
     # Deepseek chat endpoint expects model + messages payload (chat format)
-    payload = {"model": "deepseek-chat", "messages": [{"role": "user", "content": prompt}]}
+    payload = {
+        "model": "deepseek-chat",
+        "messages": [{"role": "user", "content": prompt}],
+    }
 
     attempt = 0
     last_exc = None
@@ -69,9 +76,14 @@ async def generate(
                         if isinstance(msg, dict):
                             content = msg.get("content")
                         if not content:
-                            content = first.get("text") if isinstance(first, dict) else None
+                            content = (
+                                first.get("text") if isinstance(first, dict) else None
+                            )
                         if content:
-                            return {"answer": content, **{k: v for k, v in data.items() if k != "choices"}}
+                            return {
+                                "answer": content,
+                                **{k: v for k, v in data.items() if k != "choices"},
+                            }
                     # If API already returns {'answer': ...}, pass through
                     if "answer" in data:
                         return data
@@ -86,7 +98,9 @@ async def generate(
             logger.warning("Transient network error on attempt %s: %s", attempt, e)
             last_exc = e
         except Exception as e:
-            logger.exception("Unexpected error when calling Deepseek on attempt %s", attempt)
+            logger.exception(
+                "Unexpected error when calling Deepseek on attempt %s", attempt
+            )
             last_exc = e
 
         if attempt > retries:
