@@ -58,7 +58,7 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
             found = node.find(tag, ns)
             return found.text if (found is not None and found.text) else ""
 
-        # 1. 安全提取各字段
+        # 安全提取
         title = get_node_text(entry, 'atom:title')
         title = re.sub(r'\s+', ' ', title).strip()
         
@@ -67,7 +67,6 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
         
         paper_id_url = get_node_text(entry, 'atom:id').strip()
         
-        # 如果连 URL 都没有，这一条结果就没意义，跳过
         if not paper_id_url:
             continue
 
@@ -94,15 +93,13 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
             "id": f"arxiv:{item['id']}",
             "title": item["title"],
             "text": item["text"][:2000], # 限制长度
-            "score": score,
+            "score": min( 1, score * 1.3 ),
             "provider": "arxiv",
             "source_url": item["source_url"],
             "metadata": {
-                # 可以根据需要添加作者等额外信息
             }
         }
         results.append(doc)
 
-    # 按分数排序
     results.sort(key=lambda x: x["score"], reverse=True)
     return results[:limit]

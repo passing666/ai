@@ -19,7 +19,6 @@ def calculate_normalized_scores(query: str, texts: list[str]) -> list[float]:
         doc_tokens = tokenize(text)
         doc_vec = Counter(doc_tokens)
         
-        # 计算余弦相似度
         common_terms = set(query_vec.keys()) & set(doc_vec.keys())
         dot_product = sum(query_vec[t] * doc_vec[t] for t in common_terms)
         
