@@ -4,6 +4,7 @@ import uvicorn
 from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.routing import Mount, Route
+from starlette.responses import JSONResponse
 
 from mcp.server.fastmcp import FastMCP
 from mcp.server.sse import SseServerTransport
@@ -104,6 +105,12 @@ class YA_MCPServer:
             routes=[
                 Route("/", endpoint=handle_sse),
                 Mount("/messages/", app=sse.handle_post_message),
+                Route(
+                    "/api/aggregate_search",
+                    endpoint=self._http_aggregate_search,
+                    methods=["POST"],
+                ),
+                Route("/api/answer", endpoint=self._http_answer, methods=["POST"]),
             ],
         )
 
@@ -115,6 +122,41 @@ class YA_MCPServer:
         )
 
         return app
+
+    async def _http_aggregate_search(self, request: Request):
+        """HTTP wrapper to call tools.aggregator_tool.search for quick testing."""
+        try:
+            payload = await request.json()
+        except Exception:
+            return JSONResponse({"error": "invalid json"}, status_code=400)
+
+        q = payload.get("q") or payload.get("query") or ""
+        limit = int(payload.get("limit") or payload.get("max_results") or 6)
+
+        try:
+            from tools import aggregator_tool
+
+            docs, provider_times = await aggregator_tool.search(q=q, limit=limit)
+            return JSONResponse({"results": docs, "provider_times_ms": provider_times})
+        except Exception as e:
+            return JSONResponse({"error": str(e)}, status_code=500)
+
+    async def _http_answer(self, request: Request):
+        try:
+            payload = await request.json()
+        except Exception:
+            return JSONResponse({"error": "invalid json"}, status_code=400)
+
+        q = payload.get("q") or payload.get("question") or ""
+        limit = int(payload.get("limit") or 4)
+
+        try:
+            from tools import answer_tool
+
+            resp = await answer_tool.answer(q=q, limit=limit)
+            return JSONResponse(resp)
+        except Exception as e:
+            return JSONResponse({"error": str(e)}, status_code=500)
 
     def start(self):
         """根据配置启动 MCP Server"""

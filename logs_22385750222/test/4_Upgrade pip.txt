@@ -1,0 +1,22 @@
+﻿2026-02-25T06:52:48.9670024Z ##[group]Run python -m pip install --upgrade pip
+2026-02-25T06:52:48.9670896Z [36;1mpython -m pip install --upgrade pip[0m
+2026-02-25T06:52:48.9829283Z shell: /usr/bin/bash -e {0}
+2026-02-25T06:52:48.9829866Z env:
+2026-02-25T06:52:48.9830397Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:48.9831244Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T06:52:48.9832067Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:48.9832807Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:48.9833541Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:48.9834664Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T06:52:48.9835311Z ##[endgroup]
+2026-02-25T06:52:51.7139091Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (26.0)
+2026-02-25T06:52:51.8171234Z Collecting pip
+2026-02-25T06:52:51.8920681Z   Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+2026-02-25T06:52:51.9002001Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-02-25T06:52:51.9450959Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 98.8 MB/s  0:00:00
+2026-02-25T06:52:51.9900412Z Installing collected packages: pip
+2026-02-25T06:52:51.9901564Z   Attempting uninstall: pip
+2026-02-25T06:52:51.9916922Z     Found existing installation: pip 26.0
+2026-02-25T06:52:52.0732832Z     Uninstalling pip-26.0:
+2026-02-25T06:52:52.0792129Z       Successfully uninstalled pip-26.0
+2026-02-25T06:52:52.9007558Z Successfully installed pip-26.0.1

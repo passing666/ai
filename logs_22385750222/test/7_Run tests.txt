@@ -1,0 +1,228 @@
+﻿2026-02-25T06:53:04.3205973Z ##[group]Run python -m pytest -q
+2026-02-25T06:53:04.3206285Z [36;1mpython -m pytest -q[0m
+2026-02-25T06:53:04.3237519Z shell: /usr/bin/bash -e {0}
+2026-02-25T06:53:04.3237752Z env:
+2026-02-25T06:53:04.3237999Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:53:04.3238424Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T06:53:04.3238837Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:53:04.3239236Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:53:04.3239602Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:53:04.3239958Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T06:53:04.3240455Z   PYTHONPATH: /home/runner/work/ai/ai
+2026-02-25T06:53:04.3240691Z ##[endgroup]
+2026-02-25T06:53:05.9235093Z FF.FFFFF.F.FFF                                                           [100%]
+2026-02-25T06:53:05.9235841Z =================================== FAILURES ===================================
+2026-02-25T06:53:05.9236557Z ___________________ test_answer_degraded_when_deepseek_fails ___________________
+2026-02-25T06:53:05.9237043Z async def functions are not natively supported.
+2026-02-25T06:53:05.9237521Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9237955Z   - anyio
+2026-02-25T06:53:05.9238187Z   - pytest-asyncio
+2026-02-25T06:53:05.9238413Z   - pytest-tornasync
+2026-02-25T06:53:05.9238645Z   - pytest-trio
+2026-02-25T06:53:05.9238854Z   - pytest-twisted
+2026-02-25T06:53:05.9239191Z _________________________ test_answer_success_mapping __________________________
+2026-02-25T06:53:05.9239641Z async def functions are not natively supported.
+2026-02-25T06:53:05.9240122Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9240550Z   - anyio
+2026-02-25T06:53:05.9240741Z   - pytest-asyncio
+2026-02-25T06:53:05.9240964Z   - pytest-tornasync
+2026-02-25T06:53:05.9241242Z   - pytest-trio
+2026-02-25T06:53:05.9241554Z   - pytest-twisted
+2026-02-25T06:53:05.9242063Z _____________________ test_answer_with_mocked_dependencies _____________________
+2026-02-25T06:53:05.9242780Z async def functions are not natively supported.
+2026-02-25T06:53:05.9243349Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9243779Z   - anyio
+2026-02-25T06:53:05.9244249Z   - pytest-asyncio
+2026-02-25T06:53:05.9244552Z   - pytest-tornasync
+2026-02-25T06:53:05.9244785Z   - pytest-trio
+2026-02-25T06:53:05.9244991Z   - pytest-twisted
+2026-02-25T06:53:05.9245329Z ____________________ test_generate_raises_when_key_missing _____________________
+2026-02-25T06:53:05.9245794Z async def functions are not natively supported.
+2026-02-25T06:53:05.9246253Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9246671Z   - anyio
+2026-02-25T06:53:05.9246850Z   - pytest-asyncio
+2026-02-25T06:53:05.9247039Z   - pytest-tornasync
+2026-02-25T06:53:05.9247305Z   - pytest-trio
+2026-02-25T06:53:05.9247487Z   - pytest-twisted
+2026-02-25T06:53:05.9247778Z ____________________________ test_generate_success _____________________________
+2026-02-25T06:53:05.9248147Z async def functions are not natively supported.
+2026-02-25T06:53:05.9248539Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9248899Z   - anyio
+2026-02-25T06:53:05.9249064Z   - pytest-asyncio
+2026-02-25T06:53:05.9249255Z   - pytest-tornasync
+2026-02-25T06:53:05.9249441Z   - pytest-trio
+2026-02-25T06:53:05.9249620Z   - pytest-twisted
+2026-02-25T06:53:05.9249894Z ________________________ test_generate_retries_success _________________________
+2026-02-25T06:53:05.9250261Z async def functions are not natively supported.
+2026-02-25T06:53:05.9250665Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9251015Z   - anyio
+2026-02-25T06:53:05.9251185Z   - pytest-asyncio
+2026-02-25T06:53:05.9251367Z   - pytest-tornasync
+2026-02-25T06:53:05.9251889Z   - pytest-trio
+2026-02-25T06:53:05.9252059Z   - pytest-twisted
+2026-02-25T06:53:05.9252323Z __________________________ test_generate_4xx_no_retry __________________________
+2026-02-25T06:53:05.9252686Z async def functions are not natively supported.
+2026-02-25T06:53:05.9253052Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9253394Z   - anyio
+2026-02-25T06:53:05.9253553Z   - pytest-asyncio
+2026-02-25T06:53:05.9253740Z   - pytest-tornasync
+2026-02-25T06:53:05.9254221Z   - pytest-trio
+2026-02-25T06:53:05.9254462Z   - pytest-twisted
+2026-02-25T06:53:05.9254747Z ___________________ test_provider_times_logged_and_returned ____________________
+2026-02-25T06:53:05.9255314Z async def functions are not natively supported.
+2026-02-25T06:53:05.9255696Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9256040Z   - anyio
+2026-02-25T06:53:05.9256208Z   - pytest-asyncio
+2026-02-25T06:53:05.9256404Z   - pytest-tornasync
+2026-02-25T06:53:05.9256593Z   - pytest-trio
+2026-02-25T06:53:05.9256840Z   - pytest-twisted
+2026-02-25T06:53:05.9257159Z __________________ test_rag_prompt_contains_docs_and_question __________________
+2026-02-25T06:53:05.9257538Z async def functions are not natively supported.
+2026-02-25T06:53:05.9257905Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9258249Z   - anyio
+2026-02-25T06:53:05.9258409Z   - pytest-asyncio
+2026-02-25T06:53:05.9258597Z   - pytest-tornasync
+2026-02-25T06:53:05.9258780Z   - pytest-trio
+2026-02-25T06:53:05.9258956Z   - pytest-twisted
+2026-02-25T06:53:05.9259236Z ___________________ test_selection_prefers_score_and_overlap ___________________
+2026-02-25T06:53:05.9259610Z async def functions are not natively supported.
+2026-02-25T06:53:05.9259983Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9260317Z   - anyio
+2026-02-25T06:53:05.9260479Z   - pytest-asyncio
+2026-02-25T06:53:05.9260660Z   - pytest-tornasync
+2026-02-25T06:53:05.9260935Z   - pytest-trio
+2026-02-25T06:53:05.9261105Z   - pytest-twisted
+2026-02-25T06:53:05.9261372Z __________________________ test_reranker_integration ___________________________
+2026-02-25T06:53:05.9261731Z async def functions are not natively supported.
+2026-02-25T06:53:05.9262094Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9262433Z   - anyio
+2026-02-25T06:53:05.9262591Z   - pytest-asyncio
+2026-02-25T06:53:05.9262773Z   - pytest-tornasync
+2026-02-25T06:53:05.9262950Z   - pytest-trio
+2026-02-25T06:53:05.9263122Z   - pytest-twisted
+2026-02-25T06:53:05.9263346Z =============================== warnings summary ===============================
+2026-02-25T06:53:05.9263659Z tests/test_answer.py:11
+2026-02-25T06:53:05.9264799Z   /home/runner/work/ai/ai/tests/test_answer.py:11: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9265780Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9265930Z 
+2026-02-25T06:53:05.9266012Z tests/test_answer.py:28
+2026-02-25T06:53:05.9266883Z   /home/runner/work/ai/ai/tests/test_answer.py:28: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9267829Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9267963Z 
+2026-02-25T06:53:05.9268051Z tests/test_answer_mock.py:6
+2026-02-25T06:53:05.9268951Z   /home/runner/work/ai/ai/tests/test_answer_mock.py:6: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9269888Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9270017Z 
+2026-02-25T06:53:05.9270263Z tests/test_deepseek_client.py:8
+2026-02-25T06:53:05.9271203Z   /home/runner/work/ai/ai/tests/test_deepseek_client.py:8: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9272166Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9272297Z 
+2026-02-25T06:53:05.9272386Z tests/test_deepseek_client.py:43
+2026-02-25T06:53:05.9273314Z   /home/runner/work/ai/ai/tests/test_deepseek_client.py:43: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9274661Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9274791Z 
+2026-02-25T06:53:05.9274876Z tests/test_deepseek_retry.py:42
+2026-02-25T06:53:05.9275793Z   /home/runner/work/ai/ai/tests/test_deepseek_retry.py:42: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9276741Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9276873Z 
+2026-02-25T06:53:05.9276956Z tests/test_deepseek_retry.py:49
+2026-02-25T06:53:05.9277869Z   /home/runner/work/ai/ai/tests/test_deepseek_retry.py:49: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9278800Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9278931Z 
+2026-02-25T06:53:05.9279027Z tests/test_provider_times_logging.py:6
+2026-02-25T06:53:05.9279993Z   /home/runner/work/ai/ai/tests/test_provider_times_logging.py:6: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9280959Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9281089Z 
+2026-02-25T06:53:05.9281182Z tests/test_rag_prompt_build.py:5
+2026-02-25T06:53:05.9282092Z   /home/runner/work/ai/ai/tests/test_rag_prompt_build.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9283029Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9283155Z 
+2026-02-25T06:53:05.9283247Z tests/test_rag_selection.py:5
+2026-02-25T06:53:05.9284361Z   /home/runner/work/ai/ai/tests/test_rag_selection.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9285310Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9285439Z 
+2026-02-25T06:53:05.9285532Z tests/test_reranker_integration.py:5
+2026-02-25T06:53:05.9286491Z   /home/runner/work/ai/ai/tests/test_reranker_integration.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T06:53:05.9287448Z     @pytest.mark.asyncio
+2026-02-25T06:53:05.9287575Z 
+2026-02-25T06:53:05.9287759Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-02-25T06:53:05.9288175Z =========================== short test summary info ============================
+2026-02-25T06:53:05.9288894Z FAILED tests/test_answer.py::test_answer_degraded_when_deepseek_fails - Failed: async def functions are not natively supported.
+2026-02-25T06:53:05.9289554Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9289902Z   - anyio
+2026-02-25T06:53:05.9290067Z   - pytest-asyncio
+2026-02-25T06:53:05.9290259Z   - pytest-tornasync
+2026-02-25T06:53:05.9290445Z   - pytest-trio
+2026-02-25T06:53:05.9290952Z   - pytest-twisted
+2026-02-25T06:53:05.9291385Z FAILED tests/test_answer.py::test_answer_success_mapping - Failed: async def functions are not natively supported.
+2026-02-25T06:53:05.9291984Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9292329Z   - anyio
+2026-02-25T06:53:05.9292492Z   - pytest-asyncio
+2026-02-25T06:53:05.9292680Z   - pytest-tornasync
+2026-02-25T06:53:05.9292862Z   - pytest-trio
+2026-02-25T06:53:05.9293042Z   - pytest-twisted
+2026-02-25T06:53:05.9293510Z FAILED tests/test_answer_mock.py::test_answer_with_mocked_dependencies - Failed: async def functions are not natively supported.
+2026-02-25T06:53:05.9294387Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9294857Z   - anyio
+2026-02-25T06:53:05.9295028Z   - pytest-asyncio
+2026-02-25T06:53:05.9295213Z   - pytest-tornasync
+2026-02-25T06:53:05.9295395Z   - pytest-trio
+2026-02-25T06:53:05.9295568Z   - pytest-twisted
+2026-02-25T06:53:05.9296065Z FAILED tests/test_deepseek_client.py::test_generate_raises_when_key_missing - Failed: async def functions are not natively supported.
+2026-02-25T06:53:05.9296715Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9297050Z   - anyio
+2026-02-25T06:53:05.9297212Z   - pytest-asyncio
+2026-02-25T06:53:05.9297386Z   - pytest-tornasync
+2026-02-25T06:53:05.9297572Z   - pytest-trio
+2026-02-25T06:53:05.9297740Z   - pytest-twisted
+2026-02-25T06:53:05.9298178Z FAILED tests/test_deepseek_client.py::test_generate_success - Failed: async def functions are not natively supported.
+2026-02-25T06:53:05.9298781Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:05.9299125Z   - anyio
+2026-02-25T06:53:05.9299286Z   - pytest-asyncio
+2026-02-25T06:53:05.9299464Z   - pytest-tornasync
+2026-02-25T06:53:05.9299649Z   - pytest-trio
+2026-02-25T06:53:06.0661780Z   - pytest-twisted
+2026-02-25T06:53:06.0662896Z FAILED tests/test_deepseek_retry.py::test_generate_retries_success - Failed: async def functions are not natively supported.
+2026-02-25T06:53:06.0664434Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:06.0665122Z   - anyio
+2026-02-25T06:53:06.0665442Z   - pytest-asyncio
+2026-02-25T06:53:06.0665802Z   - pytest-tornasync
+2026-02-25T06:53:06.0666129Z   - pytest-trio
+2026-02-25T06:53:06.0666435Z   - pytest-twisted
+2026-02-25T06:53:06.0667263Z FAILED tests/test_deepseek_retry.py::test_generate_4xx_no_retry - Failed: async def functions are not natively supported.
+2026-02-25T06:53:06.0668354Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:06.0668959Z   - anyio
+2026-02-25T06:53:06.0669220Z   - pytest-asyncio
+2026-02-25T06:53:06.0669521Z   - pytest-tornasync
+2026-02-25T06:53:06.0669812Z   - pytest-trio
+2026-02-25T06:53:06.0670093Z   - pytest-twisted
+2026-02-25T06:53:06.0670971Z FAILED tests/test_provider_times_logging.py::test_provider_times_logged_and_returned - Failed: async def functions are not natively supported.
+2026-02-25T06:53:06.0672129Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:06.0672692Z   - anyio
+2026-02-25T06:53:06.0672955Z   - pytest-asyncio
+2026-02-25T06:53:06.0673230Z   - pytest-tornasync
+2026-02-25T06:53:06.0673518Z   - pytest-trio
+2026-02-25T06:53:06.0673792Z   - pytest-twisted
+2026-02-25T06:53:06.0674871Z FAILED tests/test_rag_prompt_build.py::test_rag_prompt_contains_docs_and_question - Failed: async def functions are not natively supported.
+2026-02-25T06:53:06.0675995Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:06.0676526Z   - anyio
+2026-02-25T06:53:06.0676783Z   - pytest-asyncio
+2026-02-25T06:53:06.0677061Z   - pytest-tornasync
+2026-02-25T06:53:06.0677344Z   - pytest-trio
+2026-02-25T06:53:06.0677603Z   - pytest-twisted
+2026-02-25T06:53:06.0678421Z FAILED tests/test_rag_selection.py::test_selection_prefers_score_and_overlap - Failed: async def functions are not natively supported.
+2026-02-25T06:53:06.0679867Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:06.0680403Z   - anyio
+2026-02-25T06:53:06.0680657Z   - pytest-asyncio
+2026-02-25T06:53:06.0680931Z   - pytest-tornasync
+2026-02-25T06:53:06.0681224Z   - pytest-trio
+2026-02-25T06:53:06.0681501Z   - pytest-twisted
+2026-02-25T06:53:06.0682254Z FAILED tests/test_reranker_integration.py::test_reranker_integration - Failed: async def functions are not natively supported.
+2026-02-25T06:53:06.0683279Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T06:53:06.0683823Z   - anyio
+2026-02-25T06:53:06.0684466Z   - pytest-asyncio
+2026-02-25T06:53:06.0684745Z   - pytest-tornasync
+2026-02-25T06:53:06.0685026Z   - pytest-trio
+2026-02-25T06:53:06.0685280Z   - pytest-twisted
+2026-02-25T06:53:06.0685604Z 11 failed, 3 passed, 11 warnings in 0.88s
+2026-02-25T06:53:06.1839264Z ##[error]Process completed with exit code 1.

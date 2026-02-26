@@ -1,0 +1,611 @@
+﻿2026-02-25T03:57:54.6474812Z Current runner version: '2.331.0'
+2026-02-25T03:57:54.6498776Z ##[group]Runner Image Provisioner
+2026-02-25T03:57:54.6499644Z Hosted Compute Agent
+2026-02-25T03:57:54.6500169Z Version: 20260123.484
+2026-02-25T03:57:54.6500962Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+2026-02-25T03:57:54.6501712Z Build Date: 2026-01-23T19:41:17Z
+2026-02-25T03:57:54.6502318Z Worker ID: {d9747588-244c-4d70-8538-d8186c2a9750}
+2026-02-25T03:57:54.6503030Z Azure Region: eastus2
+2026-02-25T03:57:54.6503563Z ##[endgroup]
+2026-02-25T03:57:54.6504970Z ##[group]Operating System
+2026-02-25T03:57:54.6505527Z Ubuntu
+2026-02-25T03:57:54.6506072Z 24.04.3
+2026-02-25T03:57:54.6506523Z LTS
+2026-02-25T03:57:54.6507015Z ##[endgroup]
+2026-02-25T03:57:54.6507553Z ##[group]Runner Image
+2026-02-25T03:57:54.6508082Z Image: ubuntu-24.04
+2026-02-25T03:57:54.6508587Z Version: 20260201.15.1
+2026-02-25T03:57:54.6509818Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+2026-02-25T03:57:54.6512182Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+2026-02-25T03:57:54.6513148Z ##[endgroup]
+2026-02-25T03:57:54.6514216Z ##[group]GITHUB_TOKEN Permissions
+2026-02-25T03:57:54.6515988Z Contents: read
+2026-02-25T03:57:54.6516599Z Metadata: read
+2026-02-25T03:57:54.6517149Z Packages: read
+2026-02-25T03:57:54.6517610Z ##[endgroup]
+2026-02-25T03:57:54.6519617Z Secret source: Actions
+2026-02-25T03:57:54.6520541Z Prepare workflow directory
+2026-02-25T03:57:54.6840958Z Prepare all required actions
+2026-02-25T03:57:54.6878190Z Getting action download info
+2026-02-25T03:57:54.9584350Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-02-25T03:57:55.0424443Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+2026-02-25T03:57:55.4034172Z Complete job name: test
+2026-02-25T03:57:55.4734557Z ##[group]Run actions/checkout@v4
+2026-02-25T03:57:55.4735372Z with:
+2026-02-25T03:57:55.4735790Z   repository: passing666/ai
+2026-02-25T03:57:55.4736384Z   token: ***
+2026-02-25T03:57:55.4736762Z   ssh-strict: true
+2026-02-25T03:57:55.4737146Z   ssh-user: git
+2026-02-25T03:57:55.4737539Z   persist-credentials: true
+2026-02-25T03:57:55.4738015Z   clean: true
+2026-02-25T03:57:55.4738465Z   sparse-checkout-cone-mode: true
+2026-02-25T03:57:55.4738982Z   fetch-depth: 1
+2026-02-25T03:57:55.4739400Z   fetch-tags: false
+2026-02-25T03:57:55.4739797Z   show-progress: true
+2026-02-25T03:57:55.4740189Z   lfs: false
+2026-02-25T03:57:55.4740736Z   submodules: false
+2026-02-25T03:57:55.4741138Z   set-safe-directory: true
+2026-02-25T03:57:55.4741832Z ##[endgroup]
+2026-02-25T03:57:55.5809913Z Syncing repository: passing666/ai
+2026-02-25T03:57:55.5811981Z ##[group]Getting Git version info
+2026-02-25T03:57:55.5812644Z Working directory is '/home/runner/work/ai/ai'
+2026-02-25T03:57:55.5813686Z [command]/usr/bin/git version
+2026-02-25T03:57:55.5873971Z git version 2.52.0
+2026-02-25T03:57:55.5900011Z ##[endgroup]
+2026-02-25T03:57:55.5915794Z Temporarily overriding HOME='/home/runner/work/_temp/38293d16-9026-4aec-905a-2db885e23af2' before making global git config changes
+2026-02-25T03:57:55.5918146Z Adding repository directory to the temporary git global config as a safe directory
+2026-02-25T03:57:55.5929164Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai/ai
+2026-02-25T03:57:55.5966170Z Deleting the contents of '/home/runner/work/ai/ai'
+2026-02-25T03:57:55.5969771Z ##[group]Initializing the repository
+2026-02-25T03:57:55.5973821Z [command]/usr/bin/git init /home/runner/work/ai/ai
+2026-02-25T03:57:55.6056054Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-02-25T03:57:55.6057488Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-02-25T03:57:55.6058720Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-02-25T03:57:55.6059872Z hint: call:
+2026-02-25T03:57:55.6060644Z hint:
+2026-02-25T03:57:55.6061932Z hint: 	git config --global init.defaultBranch <name>
+2026-02-25T03:57:55.6063024Z hint:
+2026-02-25T03:57:55.6064054Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-02-25T03:57:55.6065796Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-02-25T03:57:55.6067170Z hint:
+2026-02-25T03:57:55.6067946Z hint: 	git branch -m <name>
+2026-02-25T03:57:55.6068801Z hint:
+2026-02-25T03:57:55.6069929Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-02-25T03:57:55.6071839Z Initialized empty Git repository in /home/runner/work/ai/ai/.git/
+2026-02-25T03:57:55.6074046Z [command]/usr/bin/git remote add origin https://github.com/passing666/ai
+2026-02-25T03:57:55.6106846Z ##[endgroup]
+2026-02-25T03:57:55.6108042Z ##[group]Disabling automatic garbage collection
+2026-02-25T03:57:55.6111761Z [command]/usr/bin/git config --local gc.auto 0
+2026-02-25T03:57:55.6140052Z ##[endgroup]
+2026-02-25T03:57:55.6141481Z ##[group]Setting up auth
+2026-02-25T03:57:55.6147519Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-02-25T03:57:55.6178896Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-02-25T03:57:55.6504661Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-02-25T03:57:55.6536865Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-02-25T03:57:55.6773245Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-02-25T03:57:55.6815600Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-02-25T03:57:55.7065341Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-02-25T03:57:55.7105605Z ##[endgroup]
+2026-02-25T03:57:55.7106700Z ##[group]Fetching the repository
+2026-02-25T03:57:55.7114438Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3ba9884582290dc65bb575bb2b4db226838f3ad4:refs/remotes/origin/fix/deepseek-chat-payload
+2026-02-25T03:57:55.8935440Z From https://github.com/passing666/ai
+2026-02-25T03:57:55.8936970Z  * [new ref]         3ba9884582290dc65bb575bb2b4db226838f3ad4 -> origin/fix/deepseek-chat-payload
+2026-02-25T03:57:55.8967908Z ##[endgroup]
+2026-02-25T03:57:55.8969193Z ##[group]Determining the checkout info
+2026-02-25T03:57:55.8970541Z ##[endgroup]
+2026-02-25T03:57:55.8975598Z [command]/usr/bin/git sparse-checkout disable
+2026-02-25T03:57:55.9014985Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-02-25T03:57:55.9040140Z ##[group]Checking out the ref
+2026-02-25T03:57:55.9046020Z [command]/usr/bin/git checkout --progress --force -B fix/deepseek-chat-payload refs/remotes/origin/fix/deepseek-chat-payload
+2026-02-25T03:57:55.9146535Z Switched to a new branch 'fix/deepseek-chat-payload'
+2026-02-25T03:57:55.9149549Z branch 'fix/deepseek-chat-payload' set up to track 'origin/fix/deepseek-chat-payload'.
+2026-02-25T03:57:55.9156169Z ##[endgroup]
+2026-02-25T03:57:55.9189583Z [command]/usr/bin/git log -1 --format=%H
+2026-02-25T03:57:55.9210956Z 3ba9884582290dc65bb575bb2b4db226838f3ad4
+2026-02-25T03:57:55.9460623Z ##[group]Run actions/setup-python@v4
+2026-02-25T03:57:55.9461177Z with:
+2026-02-25T03:57:55.9461546Z   python-version: 3.11
+2026-02-25T03:57:55.9461968Z   check-latest: false
+2026-02-25T03:57:55.9462507Z   token: ***
+2026-02-25T03:57:55.9462891Z   update-environment: true
+2026-02-25T03:57:55.9463329Z   allow-prereleases: false
+2026-02-25T03:57:55.9463742Z ##[endgroup]
+2026-02-25T03:57:56.1130798Z ##[group]Installed versions
+2026-02-25T03:57:56.1242457Z Successfully set up CPython (3.11.14)
+2026-02-25T03:57:56.1244616Z ##[endgroup]
+2026-02-25T03:57:56.1386594Z ##[group]Run python -m pip install --upgrade pip
+2026-02-25T03:57:56.1387658Z [36;1mpython -m pip install --upgrade pip[0m
+2026-02-25T03:57:56.1437226Z shell: /usr/bin/bash -e {0}
+2026-02-25T03:57:56.1437852Z env:
+2026-02-25T03:57:56.1438499Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:56.1439925Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T03:57:56.1441497Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:56.1442666Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:56.1443875Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:56.1445119Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T03:57:56.1446143Z ##[endgroup]
+2026-02-25T03:57:58.5212529Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (26.0)
+2026-02-25T03:57:58.6256402Z Collecting pip
+2026-02-25T03:57:58.6985356Z   Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+2026-02-25T03:57:58.7093869Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-02-25T03:57:58.8427342Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 16.5 MB/s  0:00:00
+2026-02-25T03:57:58.8720472Z Installing collected packages: pip
+2026-02-25T03:57:58.8721874Z   Attempting uninstall: pip
+2026-02-25T03:57:58.8736140Z     Found existing installation: pip 26.0
+2026-02-25T03:57:58.9463451Z     Uninstalling pip-26.0:
+2026-02-25T03:57:58.9527838Z       Successfully uninstalled pip-26.0
+2026-02-25T03:57:59.7715930Z Successfully installed pip-26.0.1
+2026-02-25T03:57:59.9089393Z ##[group]Run python -m pip install --upgrade pip
+2026-02-25T03:57:59.9089806Z [36;1mpython -m pip install --upgrade pip[0m
+2026-02-25T03:57:59.9090114Z [36;1mpython -m pip install pytest httpx[0m
+2026-02-25T03:57:59.9090680Z [36;1mpython -m pip install black flake8[0m
+2026-02-25T03:57:59.9126471Z shell: /usr/bin/bash -e {0}
+2026-02-25T03:57:59.9126759Z env:
+2026-02-25T03:57:59.9127023Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:59.9127461Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T03:57:59.9127917Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:59.9128298Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:59.9128670Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:57:59.9129042Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T03:57:59.9129359Z ##[endgroup]
+2026-02-25T03:58:00.2342454Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (26.0.1)
+2026-02-25T03:58:00.7893224Z Collecting pytest
+2026-02-25T03:58:00.8533024Z   Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+2026-02-25T03:58:00.8789260Z Collecting httpx
+2026-02-25T03:58:00.8867484Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-02-25T03:58:00.9059277Z Collecting iniconfig>=1.0.1 (from pytest)
+2026-02-25T03:58:00.9132722Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-02-25T03:58:00.9311113Z Collecting packaging>=22 (from pytest)
+2026-02-25T03:58:00.9384995Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-25T03:58:00.9534616Z Collecting pluggy<2,>=1.5 (from pytest)
+2026-02-25T03:58:00.9603975Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-02-25T03:58:00.9839724Z Collecting pygments>=2.7.2 (from pytest)
+2026-02-25T03:58:00.9915518Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2026-02-25T03:58:01.0142217Z Collecting anyio (from httpx)
+2026-02-25T03:58:01.0221001Z   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+2026-02-25T03:58:01.0559075Z Collecting certifi (from httpx)
+2026-02-25T03:58:01.0630396Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-02-25T03:58:01.0828967Z Collecting httpcore==1.* (from httpx)
+2026-02-25T03:58:01.0898942Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-02-25T03:58:01.1098621Z Collecting idna (from httpx)
+2026-02-25T03:58:01.1171355Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-02-25T03:58:01.1317824Z Collecting h11>=0.16 (from httpcore==1.*->httpx)
+2026-02-25T03:58:01.1414719Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-02-25T03:58:01.1625888Z Collecting typing_extensions>=4.5 (from anyio->httpx)
+2026-02-25T03:58:01.1699694Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-25T03:58:01.1811126Z Downloading pytest-9.0.2-py3-none-any.whl (374 kB)
+2026-02-25T03:58:01.2066322Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-02-25T03:58:01.2157895Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-02-25T03:58:01.2253561Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-02-25T03:58:01.2348757Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-02-25T03:58:01.2439984Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-02-25T03:58:01.2538784Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+2026-02-25T03:58:01.2634192Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2026-02-25T03:58:01.2782623Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 91.4 MB/s  0:00:00
+2026-02-25T03:58:01.2866351Z Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+2026-02-25T03:58:01.2977544Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-02-25T03:58:01.3084353Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-02-25T03:58:01.3193657Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-02-25T03:58:01.3538297Z Installing collected packages: typing_extensions, pygments, pluggy, packaging, iniconfig, idna, h11, certifi, pytest, httpcore, anyio, httpx
+2026-02-25T03:58:02.5916689Z 
+2026-02-25T03:58:02.5930471Z Successfully installed anyio-4.12.1 certifi-2026.2.25 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pygments-2.19.2 pytest-9.0.2 typing_extensions-4.15.0
+2026-02-25T03:58:03.0855396Z Collecting black
+2026-02-25T03:58:03.1517641Z   Downloading black-26.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (88 kB)
+2026-02-25T03:58:03.1994577Z Collecting flake8
+2026-02-25T03:58:03.2096129Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2026-02-25T03:58:03.2292230Z Collecting click>=8.0.0 (from black)
+2026-02-25T03:58:03.2375012Z   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-02-25T03:58:03.2515460Z Collecting mypy-extensions>=0.4.3 (from black)
+2026-02-25T03:58:03.2595174Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2026-02-25T03:58:03.2628200Z Requirement already satisfied: packaging>=22.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black) (26.0)
+2026-02-25T03:58:03.2856365Z Collecting pathspec>=1.0.0 (from black)
+2026-02-25T03:58:03.2936795Z   Downloading pathspec-1.0.4-py3-none-any.whl.metadata (13 kB)
+2026-02-25T03:58:03.3155283Z Collecting platformdirs>=2 (from black)
+2026-02-25T03:58:03.3246974Z   Downloading platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-02-25T03:58:03.3430757Z Collecting pytokens>=0.3.0 (from black)
+2026-02-25T03:58:03.3513628Z   Downloading pytokens-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-02-25T03:58:03.3656428Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+2026-02-25T03:58:03.3729756Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2026-02-25T03:58:03.3878787Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8)
+2026-02-25T03:58:03.4001217Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-02-25T03:58:03.4155396Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8)
+2026-02-25T03:58:03.4491919Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-02-25T03:58:03.4653945Z Downloading black-26.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2026-02-25T03:58:03.5690634Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 17.9 MB/s  0:00:00
+2026-02-25T03:58:03.5779752Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2026-02-25T03:58:03.5879267Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-02-25T03:58:03.5983899Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-02-25T03:58:03.6073069Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2026-02-25T03:58:03.6167865Z Downloading click-8.3.1-py3-none-any.whl (108 kB)
+2026-02-25T03:58:03.6324932Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-02-25T03:58:03.6422618Z Downloading pathspec-1.0.4-py3-none-any.whl (55 kB)
+2026-02-25T03:58:03.6525450Z Downloading platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-02-25T03:58:03.6691318Z Downloading pytokens-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (260 kB)
+2026-02-25T03:58:03.7157506Z Installing collected packages: pytokens, pyflakes, pycodestyle, platformdirs, pathspec, mypy-extensions, mccabe, click, flake8, black
+2026-02-25T03:58:04.1157556Z 
+2026-02-25T03:58:04.1173173Z Successfully installed black-26.1.0 click-8.3.1 flake8-7.3.0 mccabe-0.7.0 mypy-extensions-1.1.0 pathspec-1.0.4 platformdirs-4.9.2 pycodestyle-2.14.0 pyflakes-3.4.0 pytokens-0.4.1
+2026-02-25T03:58:04.1757635Z ##[group]Run # Install the repo package so tests can import `mcp` and other modules
+2026-02-25T03:58:04.1758261Z [36;1m# Install the repo package so tests can import `mcp` and other modules[0m
+2026-02-25T03:58:04.1758655Z [36;1mpython -m pip install -e .[0m
+2026-02-25T03:58:04.1792937Z shell: /usr/bin/bash -e {0}
+2026-02-25T03:58:04.1793162Z env:
+2026-02-25T03:58:04.1793421Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:04.1793852Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T03:58:04.1794319Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:04.1794690Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:04.1795043Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:04.1795410Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T03:58:04.1795707Z ##[endgroup]
+2026-02-25T03:58:04.4997043Z Obtaining file:///home/runner/work/ai/ai
+2026-02-25T03:58:04.5012550Z   Installing build dependencies: started
+2026-02-25T03:58:05.3678219Z   Installing build dependencies: finished with status 'done'
+2026-02-25T03:58:05.3684637Z   Checking if build backend supports build_editable: started
+2026-02-25T03:58:05.6939243Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-02-25T03:58:05.6947657Z   Getting requirements to build editable: started
+2026-02-25T03:58:05.9972110Z   Getting requirements to build editable: finished with status 'done'
+2026-02-25T03:58:05.9982104Z   Preparing editable metadata (pyproject.toml): started
+2026-02-25T03:58:06.1656661Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-02-25T03:58:06.2545014Z Collecting art>=6.5 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.3206931Z   Downloading art-6.5-py3-none-any.whl.metadata (72 kB)
+2026-02-25T03:58:06.3453294Z Requirement already satisfied: black>=25.9.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from YA_MCPServer_YourTeam==0.1.0) (26.1.0)
+2026-02-25T03:58:06.3629139Z Collecting colorlog>=6.10.1 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.3701473Z   Downloading colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+2026-02-25T03:58:06.3746349Z Requirement already satisfied: httpx>=0.28.1 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from YA_MCPServer_YourTeam==0.1.0) (0.28.1)
+2026-02-25T03:58:06.3918463Z Collecting mcp>=1.14.0 (from mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.3992843Z   Downloading mcp-1.26.0-py3-none-any.whl.metadata (89 kB)
+2026-02-25T03:58:06.4539739Z Collecting pyyaml>=6.0.2 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.4618312Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-02-25T03:58:06.7686613Z Collecting ruff>=0.14.4 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.7763689Z   Downloading ruff-0.15.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+2026-02-25T03:58:06.7843820Z Requirement already satisfied: click>=8.0.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (8.3.1)
+2026-02-25T03:58:06.7848899Z Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (1.1.0)
+2026-02-25T03:58:06.7853931Z Requirement already satisfied: packaging>=22.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (26.0)
+2026-02-25T03:58:06.7858646Z Requirement already satisfied: pathspec>=1.0.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (1.0.4)
+2026-02-25T03:58:06.7864095Z Requirement already satisfied: platformdirs>=2 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (4.9.2)
+2026-02-25T03:58:06.7868649Z Requirement already satisfied: pytokens>=0.3.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (0.4.1)
+2026-02-25T03:58:06.7891238Z Requirement already satisfied: anyio in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (4.12.1)
+2026-02-25T03:58:06.7895499Z Requirement already satisfied: certifi in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (2026.2.25)
+2026-02-25T03:58:06.7900640Z Requirement already satisfied: httpcore==1.* in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (1.0.9)
+2026-02-25T03:58:06.7904781Z Requirement already satisfied: idna in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (3.11)
+2026-02-25T03:58:06.7923772Z Requirement already satisfied: h11>=0.16 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpcore==1.*->httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (0.16.0)
+2026-02-25T03:58:06.8047587Z Collecting httpx-sse>=0.4 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.8120932Z   Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+2026-02-25T03:58:06.8350017Z Collecting jsonschema>=4.20.0 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.8422649Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-02-25T03:58:06.8603654Z Collecting pydantic-settings>=2.5.2 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:06.8676000Z   Downloading pydantic_settings-2.13.1-py3-none-any.whl.metadata (3.4 kB)
+2026-02-25T03:58:06.9955838Z Collecting pydantic<3.0.0,>=2.11.0 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.0031813Z   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+2026-02-25T03:58:07.0293389Z Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.0365752Z   Downloading pyjwt-2.11.0-py3-none-any.whl.metadata (4.0 kB)
+2026-02-25T03:58:07.0523874Z Collecting python-multipart>=0.0.9 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.0594304Z   Downloading python_multipart-0.0.22-py3-none-any.whl.metadata (1.8 kB)
+2026-02-25T03:58:07.0773276Z Collecting sse-starlette>=1.6.1 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.0845167Z   Downloading sse_starlette-3.2.0-py3-none-any.whl.metadata (12 kB)
+2026-02-25T03:58:07.1122272Z Collecting starlette>=0.27 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.1194743Z   Downloading starlette-0.52.1-py3-none-any.whl.metadata (6.3 kB)
+2026-02-25T03:58:07.1232895Z Requirement already satisfied: typing-extensions>=4.9.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0) (4.15.0)
+2026-02-25T03:58:07.1341391Z Collecting typing-inspection>=0.4.1 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.1414420Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-02-25T03:58:07.1640655Z Collecting uvicorn>=0.31.1 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.1714642Z   Downloading uvicorn-0.41.0-py3-none-any.whl.metadata (6.7 kB)
+2026-02-25T03:58:07.1878693Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.11.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.1962751Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-02-25T03:58:07.8329024Z Collecting pydantic-core==2.41.5 (from pydantic<3.0.0,>=2.11.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.8416753Z   Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-02-25T03:58:07.8645362Z Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.8718896Z   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-02-25T03:58:07.8869312Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.8948846Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-02-25T03:58:07.9175440Z Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:07.9251468Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-02-25T03:58:08.2114422Z Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.2193468Z   Downloading rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-02-25T03:58:08.2425341Z Collecting python-dotenv>=1.0.0 (from mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.2498357Z   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+2026-02-25T03:58:08.2711950Z Collecting typer>=0.16.0 (from mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.2784411Z   Downloading typer-0.24.1-py3-none-any.whl.metadata (16 kB)
+2026-02-25T03:58:08.4520454Z Collecting cryptography>=3.4.0 (from pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.4596692Z   Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+2026-02-25T03:58:08.6339988Z Collecting cffi>=2.0.0 (from cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.6416134Z   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-02-25T03:58:08.6575820Z Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.6648185Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-02-25T03:58:08.6923724Z Collecting shellingham>=1.3.0 (from typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.6999694Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-02-25T03:58:08.7317547Z Collecting rich>=12.3.0 (from typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.7390968Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+2026-02-25T03:58:08.7555505Z Collecting annotated-doc>=0.0.2 (from typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.7625407Z   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-02-25T03:58:08.7804514Z Collecting markdown-it-py>=2.2.0 (from rich>=12.3.0->typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.7875138Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-02-25T03:58:08.7932074Z Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from rich>=12.3.0->typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0) (2.19.2)
+2026-02-25T03:58:08.8049450Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.3.0->typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T03:58:08.8120412Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-02-25T03:58:08.8303625Z Downloading art-6.5-py3-none-any.whl (610 kB)
+2026-02-25T03:58:08.8749270Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 610.4/610.4 kB 15.3 MB/s  0:00:00
+2026-02-25T03:58:08.8820478Z Downloading colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-02-25T03:58:08.8909352Z Downloading mcp-1.26.0-py3-none-any.whl (233 kB)
+2026-02-25T03:58:08.9118913Z Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-02-25T03:58:08.9422043Z Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-02-25T03:58:09.0133863Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 30.7 MB/s  0:00:00
+2026-02-25T03:58:09.0208658Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-02-25T03:58:09.0299224Z Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+2026-02-25T03:58:09.0403653Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-02-25T03:58:09.0501211Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-02-25T03:58:09.0591710Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-02-25T03:58:09.0704262Z Downloading pydantic_settings-2.13.1-py3-none-any.whl (58 kB)
+2026-02-25T03:58:09.0800501Z Downloading pyjwt-2.11.0-py3-none-any.whl (28 kB)
+2026-02-25T03:58:09.0891281Z Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+2026-02-25T03:58:09.1733777Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 54.6 MB/s  0:00:00
+2026-02-25T03:58:09.1805206Z Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+2026-02-25T03:58:09.1917894Z Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+2026-02-25T03:58:09.2009545Z Downloading python_multipart-0.0.22-py3-none-any.whl (24 kB)
+2026-02-25T03:58:09.2129655Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-02-25T03:58:09.2261050Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 58.9 MB/s  0:00:00
+2026-02-25T03:58:09.2332569Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-02-25T03:58:09.2425767Z Downloading rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-02-25T03:58:09.2560455Z Downloading ruff-0.15.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.1 MB)
+2026-02-25T03:58:09.3573381Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 111.8 MB/s  0:00:00
+2026-02-25T03:58:09.3649648Z Downloading sse_starlette-3.2.0-py3-none-any.whl (12 kB)
+2026-02-25T03:58:09.3743061Z Downloading starlette-0.52.1-py3-none-any.whl (74 kB)
+2026-02-25T03:58:09.3840627Z Downloading typer-0.24.1-py3-none-any.whl (56 kB)
+2026-02-25T03:58:09.3930557Z Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-02-25T03:58:09.4026634Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+2026-02-25T03:58:09.4138893Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-02-25T03:58:09.4231833Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-02-25T03:58:09.4322573Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-02-25T03:58:09.4412222Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-02-25T03:58:09.4500780Z Downloading uvicorn-0.41.0-py3-none-any.whl (68 kB)
+2026-02-25T03:58:09.4592730Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-02-25T03:58:09.4986018Z Building wheels for collected packages: YA_MCPServer_YourTeam
+2026-02-25T03:58:09.4994434Z   Building editable for YA_MCPServer_YourTeam (pyproject.toml): started
+2026-02-25T03:58:09.6850686Z   Building editable for YA_MCPServer_YourTeam (pyproject.toml): finished with status 'done'
+2026-02-25T03:58:09.6857724Z   Created wheel for YA_MCPServer_YourTeam: filename=ya_mcpserver_yourteam-0.1.0-0.editable-py3-none-any.whl size=4179 sha256=0f56e88defaaed3cbca88ba82e14867f00daf2ee257a426cc6204f6b2eeb8f87
+2026-02-25T03:58:09.6860032Z   Stored in directory: /tmp/pip-ephem-wheel-cache-gpzi8c9b/wheels/2b/32/2c/7b67cebd2797dd89bb1d1d1ec4fe1a9288c98faa5dfd9a3f78
+2026-02-25T03:58:09.6875029Z Successfully built YA_MCPServer_YourTeam
+2026-02-25T03:58:09.7476860Z Installing collected packages: uvicorn, typing-inspection, shellingham, ruff, rpds-py, pyyaml, python-multipart, python-dotenv, pyjwt, pydantic-core, pycparser, mdurl, httpx-sse, colorlog, attrs, art, annotated-types, annotated-doc, starlette, referencing, pydantic, markdown-it-py, cffi, sse-starlette, rich, pydantic-settings, jsonschema-specifications, cryptography, typer, jsonschema, mcp, YA_MCPServer_YourTeam
+2026-02-25T03:58:11.6141032Z 
+2026-02-25T03:58:11.6168455Z Successfully installed YA_MCPServer_YourTeam-0.1.0 annotated-doc-0.0.4 annotated-types-0.7.0 art-6.5 attrs-25.4.0 cffi-2.0.0 colorlog-6.10.1 cryptography-46.0.5 httpx-sse-0.4.3 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markdown-it-py-4.0.0 mcp-1.26.0 mdurl-0.1.2 pycparser-3.0 pydantic-2.12.5 pydantic-core-2.41.5 pydantic-settings-2.13.1 pyjwt-2.11.0 python-dotenv-1.2.1 python-multipart-0.0.22 pyyaml-6.0.3 referencing-0.37.0 rich-14.3.3 rpds-py-0.30.0 ruff-0.15.2 shellingham-1.5.4 sse-starlette-3.2.0 starlette-0.52.1 typer-0.24.1 typing-inspection-0.4.2 uvicorn-0.41.0
+2026-02-25T03:58:12.0011082Z ##[group]Run python -m pytest -q
+2026-02-25T03:58:12.0011403Z [36;1mpython -m pytest -q[0m
+2026-02-25T03:58:12.0045679Z shell: /usr/bin/bash -e {0}
+2026-02-25T03:58:12.0045913Z env:
+2026-02-25T03:58:12.0046153Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:12.0046572Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T03:58:12.0046985Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:12.0047335Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:12.0047689Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T03:58:12.0048055Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T03:58:12.0048373Z ##[endgroup]
+2026-02-25T03:58:13.7514794Z FF.FFFFF.F.FFF                                                           [100%]
+2026-02-25T03:58:13.7515530Z =================================== FAILURES ===================================
+2026-02-25T03:58:13.7516354Z ___________________ test_answer_degraded_when_deepseek_fails ___________________
+2026-02-25T03:58:13.7517072Z async def functions are not natively supported.
+2026-02-25T03:58:13.7517756Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7518369Z   - anyio
+2026-02-25T03:58:13.7518709Z   - pytest-asyncio
+2026-02-25T03:58:13.7519050Z   - pytest-tornasync
+2026-02-25T03:58:13.7519389Z   - pytest-trio
+2026-02-25T03:58:13.7519716Z   - pytest-twisted
+2026-02-25T03:58:13.7520382Z _________________________ test_answer_success_mapping __________________________
+2026-02-25T03:58:13.7521350Z async def functions are not natively supported.
+2026-02-25T03:58:13.7522076Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7522708Z   - anyio
+2026-02-25T03:58:13.7522997Z   - pytest-asyncio
+2026-02-25T03:58:13.7523335Z   - pytest-tornasync
+2026-02-25T03:58:13.7523674Z   - pytest-trio
+2026-02-25T03:58:13.7523987Z   - pytest-twisted
+2026-02-25T03:58:13.7524508Z _____________________ test_answer_with_mocked_dependencies _____________________
+2026-02-25T03:58:13.7525112Z async def functions are not natively supported.
+2026-02-25T03:58:13.7525515Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7525880Z   - anyio
+2026-02-25T03:58:13.7526060Z   - pytest-asyncio
+2026-02-25T03:58:13.7526248Z   - pytest-tornasync
+2026-02-25T03:58:13.7526444Z   - pytest-trio
+2026-02-25T03:58:13.7526613Z   - pytest-twisted
+2026-02-25T03:58:13.7526894Z ____________________ test_generate_raises_when_key_missing _____________________
+2026-02-25T03:58:13.7527282Z async def functions are not natively supported.
+2026-02-25T03:58:13.7527647Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7527989Z   - anyio
+2026-02-25T03:58:13.7528148Z   - pytest-asyncio
+2026-02-25T03:58:13.7528327Z   - pytest-tornasync
+2026-02-25T03:58:13.7528503Z   - pytest-trio
+2026-02-25T03:58:13.7528678Z   - pytest-twisted
+2026-02-25T03:58:13.7528987Z ____________________________ test_generate_success _____________________________
+2026-02-25T03:58:13.7529348Z async def functions are not natively supported.
+2026-02-25T03:58:13.7529716Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7530065Z   - anyio
+2026-02-25T03:58:13.7530415Z   - pytest-asyncio
+2026-02-25T03:58:13.7530663Z   - pytest-tornasync
+2026-02-25T03:58:13.7530852Z   - pytest-trio
+2026-02-25T03:58:13.7531031Z   - pytest-twisted
+2026-02-25T03:58:13.7531299Z ________________________ test_generate_retries_success _________________________
+2026-02-25T03:58:13.7531677Z async def functions are not natively supported.
+2026-02-25T03:58:13.7532055Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7532394Z   - anyio
+2026-02-25T03:58:13.7532559Z   - pytest-asyncio
+2026-02-25T03:58:13.7532734Z   - pytest-tornasync
+2026-02-25T03:58:13.7533156Z   - pytest-trio
+2026-02-25T03:58:13.7533326Z   - pytest-twisted
+2026-02-25T03:58:13.7533588Z __________________________ test_generate_4xx_no_retry __________________________
+2026-02-25T03:58:13.7533946Z async def functions are not natively supported.
+2026-02-25T03:58:13.7534316Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7534657Z   - anyio
+2026-02-25T03:58:13.7534811Z   - pytest-asyncio
+2026-02-25T03:58:13.7534991Z   - pytest-tornasync
+2026-02-25T03:58:13.7535166Z   - pytest-trio
+2026-02-25T03:58:13.7535338Z   - pytest-twisted
+2026-02-25T03:58:13.7535604Z ___________________ test_provider_times_logged_and_returned ____________________
+2026-02-25T03:58:13.7535979Z async def functions are not natively supported.
+2026-02-25T03:58:13.7536337Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7536677Z   - anyio
+2026-02-25T03:58:13.7536833Z   - pytest-asyncio
+2026-02-25T03:58:13.7537020Z   - pytest-tornasync
+2026-02-25T03:58:13.7537212Z   - pytest-trio
+2026-02-25T03:58:13.7537395Z   - pytest-twisted
+2026-02-25T03:58:13.7537750Z __________________ test_rag_prompt_contains_docs_and_question __________________
+2026-02-25T03:58:13.7538124Z async def functions are not natively supported.
+2026-02-25T03:58:13.7538484Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7538827Z   - anyio
+2026-02-25T03:58:13.7538983Z   - pytest-asyncio
+2026-02-25T03:58:13.7539163Z   - pytest-tornasync
+2026-02-25T03:58:13.7539339Z   - pytest-trio
+2026-02-25T03:58:13.7539506Z   - pytest-twisted
+2026-02-25T03:58:13.7539917Z ___________________ test_selection_prefers_score_and_overlap ___________________
+2026-02-25T03:58:13.7540674Z async def functions are not natively supported.
+2026-02-25T03:58:13.7541082Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7541443Z   - anyio
+2026-02-25T03:58:13.7541624Z   - pytest-asyncio
+2026-02-25T03:58:13.7541826Z   - pytest-tornasync
+2026-02-25T03:58:13.7542120Z   - pytest-trio
+2026-02-25T03:58:13.7542292Z   - pytest-twisted
+2026-02-25T03:58:13.7542571Z __________________________ test_reranker_integration ___________________________
+2026-02-25T03:58:13.7542938Z async def functions are not natively supported.
+2026-02-25T03:58:13.7543324Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7543664Z   - anyio
+2026-02-25T03:58:13.7543844Z   - pytest-asyncio
+2026-02-25T03:58:13.7544029Z   - pytest-tornasync
+2026-02-25T03:58:13.7544206Z   - pytest-trio
+2026-02-25T03:58:13.7544382Z   - pytest-twisted
+2026-02-25T03:58:13.7544606Z =============================== warnings summary ===============================
+2026-02-25T03:58:13.7544912Z tests/test_answer.py:11
+2026-02-25T03:58:13.7545825Z   /home/runner/work/ai/ai/tests/test_answer.py:11: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7546796Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7546934Z 
+2026-02-25T03:58:13.7547023Z tests/test_answer.py:28
+2026-02-25T03:58:13.7547894Z   /home/runner/work/ai/ai/tests/test_answer.py:28: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7548809Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7548936Z 
+2026-02-25T03:58:13.7549021Z tests/test_answer_mock.py:6
+2026-02-25T03:58:13.7549912Z   /home/runner/work/ai/ai/tests/test_answer_mock.py:6: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7551049Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7551178Z 
+2026-02-25T03:58:13.7551266Z tests/test_deepseek_client.py:8
+2026-02-25T03:58:13.7552334Z   /home/runner/work/ai/ai/tests/test_deepseek_client.py:8: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7553304Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7553432Z 
+2026-02-25T03:58:13.7553518Z tests/test_deepseek_client.py:43
+2026-02-25T03:58:13.7554443Z   /home/runner/work/ai/ai/tests/test_deepseek_client.py:43: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7555376Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7555508Z 
+2026-02-25T03:58:13.7555591Z tests/test_deepseek_retry.py:42
+2026-02-25T03:58:13.7556500Z   /home/runner/work/ai/ai/tests/test_deepseek_retry.py:42: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7557427Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7557555Z 
+2026-02-25T03:58:13.7557636Z tests/test_deepseek_retry.py:49
+2026-02-25T03:58:13.7558571Z   /home/runner/work/ai/ai/tests/test_deepseek_retry.py:49: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7559503Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7559623Z 
+2026-02-25T03:58:13.7559934Z tests/test_provider_times_logging.py:6
+2026-02-25T03:58:13.7561080Z   /home/runner/work/ai/ai/tests/test_provider_times_logging.py:6: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7562056Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7562186Z 
+2026-02-25T03:58:13.7562284Z tests/test_rag_prompt_build.py:5
+2026-02-25T03:58:13.7563198Z   /home/runner/work/ai/ai/tests/test_rag_prompt_build.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7564137Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7564260Z 
+2026-02-25T03:58:13.7564343Z tests/test_rag_selection.py:5
+2026-02-25T03:58:13.7565255Z   /home/runner/work/ai/ai/tests/test_rag_selection.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7566201Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7566325Z 
+2026-02-25T03:58:13.7566416Z tests/test_reranker_integration.py:5
+2026-02-25T03:58:13.7567385Z   /home/runner/work/ai/ai/tests/test_reranker_integration.py:5: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+2026-02-25T03:58:13.7568347Z     @pytest.mark.asyncio
+2026-02-25T03:58:13.7568471Z 
+2026-02-25T03:58:13.7568653Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-02-25T03:58:13.7569060Z =========================== short test summary info ============================
+2026-02-25T03:58:13.7569805Z FAILED tests/test_answer.py::test_answer_degraded_when_deepseek_fails - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.7570646Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7570987Z   - anyio
+2026-02-25T03:58:13.7571152Z   - pytest-asyncio
+2026-02-25T03:58:13.7571337Z   - pytest-tornasync
+2026-02-25T03:58:13.7571517Z   - pytest-trio
+2026-02-25T03:58:13.7571693Z   - pytest-twisted
+2026-02-25T03:58:13.7572414Z FAILED tests/test_answer.py::test_answer_success_mapping - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.7573020Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7573347Z   - anyio
+2026-02-25T03:58:13.7573505Z   - pytest-asyncio
+2026-02-25T03:58:13.7573678Z   - pytest-tornasync
+2026-02-25T03:58:13.7573857Z   - pytest-trio
+2026-02-25T03:58:13.7574037Z   - pytest-twisted
+2026-02-25T03:58:13.7574498Z FAILED tests/test_answer_mock.py::test_answer_with_mocked_dependencies - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.7575150Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7575483Z   - anyio
+2026-02-25T03:58:13.7575652Z   - pytest-asyncio
+2026-02-25T03:58:13.7575832Z   - pytest-tornasync
+2026-02-25T03:58:13.7576022Z   - pytest-trio
+2026-02-25T03:58:13.7576192Z   - pytest-twisted
+2026-02-25T03:58:13.7576712Z FAILED tests/test_deepseek_client.py::test_generate_raises_when_key_missing - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.7577365Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7577693Z   - anyio
+2026-02-25T03:58:13.7577856Z   - pytest-asyncio
+2026-02-25T03:58:13.7578029Z   - pytest-tornasync
+2026-02-25T03:58:13.7578210Z   - pytest-trio
+2026-02-25T03:58:13.7578377Z   - pytest-twisted
+2026-02-25T03:58:13.7578808Z FAILED tests/test_deepseek_client.py::test_generate_success - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.7579409Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.7579895Z   - anyio
+2026-02-25T03:58:13.7580065Z   - pytest-asyncio
+2026-02-25T03:58:13.7580437Z   - pytest-tornasync
+2026-02-25T03:58:13.7580643Z   - pytest-trio
+2026-02-25T03:58:13.8330839Z   - pytest-twisted
+2026-02-25T03:58:13.8332093Z FAILED tests/test_deepseek_retry.py::test_generate_retries_success - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.8333291Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.8333933Z   - anyio
+2026-02-25T03:58:13.8334208Z   - pytest-asyncio
+2026-02-25T03:58:13.8334529Z   - pytest-tornasync
+2026-02-25T03:58:13.8334856Z   - pytest-trio
+2026-02-25T03:58:13.8335170Z   - pytest-twisted
+2026-02-25T03:58:13.8335968Z FAILED tests/test_deepseek_retry.py::test_generate_4xx_no_retry - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.8337002Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.8337578Z   - anyio
+2026-02-25T03:58:13.8337825Z   - pytest-asyncio
+2026-02-25T03:58:13.8338110Z   - pytest-tornasync
+2026-02-25T03:58:13.8338379Z   - pytest-trio
+2026-02-25T03:58:13.8338642Z   - pytest-twisted
+2026-02-25T03:58:13.8339482Z FAILED tests/test_provider_times_logging.py::test_provider_times_logged_and_returned - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.8340826Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.8341377Z   - anyio
+2026-02-25T03:58:13.8341604Z   - pytest-asyncio
+2026-02-25T03:58:13.8341877Z   - pytest-tornasync
+2026-02-25T03:58:13.8342140Z   - pytest-trio
+2026-02-25T03:58:13.8342404Z   - pytest-twisted
+2026-02-25T03:58:13.8343278Z FAILED tests/test_rag_prompt_build.py::test_rag_prompt_contains_docs_and_question - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.8344352Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.8344888Z   - anyio
+2026-02-25T03:58:13.8345121Z   - pytest-asyncio
+2026-02-25T03:58:13.8345385Z   - pytest-tornasync
+2026-02-25T03:58:13.8345661Z   - pytest-trio
+2026-02-25T03:58:13.8345909Z   - pytest-twisted
+2026-02-25T03:58:13.8347050Z FAILED tests/test_rag_selection.py::test_selection_prefers_score_and_overlap - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.8348206Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.8348769Z   - anyio
+2026-02-25T03:58:13.8349026Z   - pytest-asyncio
+2026-02-25T03:58:13.8349368Z   - pytest-tornasync
+2026-02-25T03:58:13.8349704Z   - pytest-trio
+2026-02-25T03:58:13.8349973Z   - pytest-twisted
+2026-02-25T03:58:13.8350937Z FAILED tests/test_reranker_integration.py::test_reranker_integration - Failed: async def functions are not natively supported.
+2026-02-25T03:58:13.8352031Z You need to install a suitable plugin for your async framework, for example:
+2026-02-25T03:58:13.8352584Z   - anyio
+2026-02-25T03:58:13.8352844Z   - pytest-asyncio
+2026-02-25T03:58:13.8353126Z   - pytest-tornasync
+2026-02-25T03:58:13.8353419Z   - pytest-trio
+2026-02-25T03:58:13.8353689Z   - pytest-twisted
+2026-02-25T03:58:13.8354029Z 11 failed, 3 passed, 11 warnings in 1.00s
+2026-02-25T03:58:13.9221322Z ##[error]Process completed with exit code 1.
+2026-02-25T03:58:13.9328069Z Post job cleanup.
+2026-02-25T03:58:14.0267087Z [command]/usr/bin/git version
+2026-02-25T03:58:14.0303261Z git version 2.52.0
+2026-02-25T03:58:14.0344830Z Temporarily overriding HOME='/home/runner/work/_temp/375f8fc9-a748-47d1-a734-bb2bbed3ee6e' before making global git config changes
+2026-02-25T03:58:14.0345985Z Adding repository directory to the temporary git global config as a safe directory
+2026-02-25T03:58:14.0356343Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai/ai
+2026-02-25T03:58:14.0390404Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-02-25T03:58:14.0421580Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-02-25T03:58:14.0651340Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-02-25T03:58:14.0670878Z http.https://github.com/.extraheader
+2026-02-25T03:58:14.0684685Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-02-25T03:58:14.0713970Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-02-25T03:58:14.0930169Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-02-25T03:58:14.0960159Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-02-25T03:58:14.1308869Z Cleaning up orphan processes

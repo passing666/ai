@@ -1,12 +1,9 @@
-from modules.YA_Common.utils.logger import get_logger
+from setuptools import setup, find_packages
 
-logger = get_logger("setup")
-
-
-def setup():
-    """Setup your environment and dependencies here."""
-    try:
-        logger.info("Setup complete.")
-    except Exception as e:
-        logger.error(f"Setup failed: {e}")
-        raise e
+setup(
+    name="YA_MCPServer_YourTeam",
+    version="0.1.0",
+    description="YA MCP Server for YourTeam",
+    packages=find_packages(exclude=["tests", "docs", "out"]),
+    include_package_data=True,
+)

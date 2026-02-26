@@ -1,0 +1,143 @@
+﻿2026-02-25T06:52:56.9808237Z ##[group]Run # Install the repo package so tests can import `mcp` and other modules
+2026-02-25T06:52:56.9808833Z [36;1m# Install the repo package so tests can import `mcp` and other modules[0m
+2026-02-25T06:52:56.9809226Z [36;1mpython -m pip install -e .[0m
+2026-02-25T06:52:56.9840975Z shell: /usr/bin/bash -e {0}
+2026-02-25T06:52:56.9841210Z env:
+2026-02-25T06:52:56.9841453Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:56.9841876Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-02-25T06:52:56.9842288Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:56.9842665Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:56.9843022Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-02-25T06:52:56.9843384Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-02-25T06:52:56.9843684Z ##[endgroup]
+2026-02-25T06:52:57.3084819Z Obtaining file:///home/runner/work/ai/ai
+2026-02-25T06:52:57.3100895Z   Installing build dependencies: started
+2026-02-25T06:52:58.1151015Z   Installing build dependencies: finished with status 'done'
+2026-02-25T06:52:58.1156895Z   Checking if build backend supports build_editable: started
+2026-02-25T06:52:58.4400913Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-02-25T06:52:58.4409326Z   Getting requirements to build editable: started
+2026-02-25T06:52:58.7559076Z   Getting requirements to build editable: finished with status 'done'
+2026-02-25T06:52:58.7568451Z   Preparing editable metadata (pyproject.toml): started
+2026-02-25T06:52:58.9331169Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-02-25T06:52:59.0093700Z Collecting art>=6.5 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.0667159Z   Downloading art-6.5-py3-none-any.whl.metadata (72 kB)
+2026-02-25T06:52:59.0972745Z Requirement already satisfied: black>=25.9.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from YA_MCPServer_YourTeam==0.1.0) (26.1.0)
+2026-02-25T06:52:59.1120577Z Collecting colorlog>=6.10.1 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.1161039Z   Downloading colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+2026-02-25T06:52:59.1210039Z Requirement already satisfied: httpx>=0.28.1 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from YA_MCPServer_YourTeam==0.1.0) (0.28.1)
+2026-02-25T06:52:59.1355071Z Collecting mcp>=1.14.0 (from mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.1395159Z   Downloading mcp-1.26.0-py3-none-any.whl.metadata (89 kB)
+2026-02-25T06:52:59.1860117Z Collecting pyyaml>=6.0.2 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.1901955Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-02-25T06:52:59.5047947Z Collecting ruff>=0.14.4 (from YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.5090847Z   Downloading ruff-0.15.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+2026-02-25T06:52:59.5168993Z Requirement already satisfied: click>=8.0.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (8.3.1)
+2026-02-25T06:52:59.5173246Z Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (1.1.0)
+2026-02-25T06:52:59.5177496Z Requirement already satisfied: packaging>=22.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (26.0)
+2026-02-25T06:52:59.5181461Z Requirement already satisfied: pathspec>=1.0.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (1.0.4)
+2026-02-25T06:52:59.5185633Z Requirement already satisfied: platformdirs>=2 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (4.9.2)
+2026-02-25T06:52:59.5189628Z Requirement already satisfied: pytokens>=0.3.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from black>=25.9.0->YA_MCPServer_YourTeam==0.1.0) (0.4.1)
+2026-02-25T06:52:59.5210879Z Requirement already satisfied: anyio in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (4.12.1)
+2026-02-25T06:52:59.5214544Z Requirement already satisfied: certifi in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (2026.2.25)
+2026-02-25T06:52:59.5220294Z Requirement already satisfied: httpcore==1.* in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (1.0.9)
+2026-02-25T06:52:59.5225014Z Requirement already satisfied: idna in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (3.11)
+2026-02-25T06:52:59.5243576Z Requirement already satisfied: h11>=0.16 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpcore==1.*->httpx>=0.28.1->YA_MCPServer_YourTeam==0.1.0) (0.16.0)
+2026-02-25T06:52:59.5333617Z Collecting httpx-sse>=0.4 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.5373247Z   Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+2026-02-25T06:52:59.5578623Z Collecting jsonschema>=4.20.0 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.5617724Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-02-25T06:52:59.5770903Z Collecting pydantic-settings>=2.5.2 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.5808627Z   Downloading pydantic_settings-2.13.1-py3-none-any.whl.metadata (3.4 kB)
+2026-02-25T06:52:59.6996188Z Collecting pydantic<3.0.0,>=2.11.0 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.7037156Z   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+2026-02-25T06:52:59.7220909Z Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.7259176Z   Downloading pyjwt-2.11.0-py3-none-any.whl.metadata (4.0 kB)
+2026-02-25T06:52:59.7395390Z Collecting python-multipart>=0.0.9 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.7434526Z   Downloading python_multipart-0.0.22-py3-none-any.whl.metadata (1.8 kB)
+2026-02-25T06:52:59.7598073Z Collecting sse-starlette>=1.6.1 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.7636031Z   Downloading sse_starlette-3.2.0-py3-none-any.whl.metadata (12 kB)
+2026-02-25T06:52:59.7885170Z Collecting starlette>=0.27 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.7925067Z   Downloading starlette-0.52.1-py3-none-any.whl.metadata (6.3 kB)
+2026-02-25T06:52:59.7969802Z Requirement already satisfied: typing-extensions>=4.9.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0) (4.15.0)
+2026-02-25T06:52:59.8040367Z Collecting typing-inspection>=0.4.1 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.8077319Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-02-25T06:52:59.8284947Z Collecting uvicorn>=0.31.1 (from mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.8322381Z   Downloading uvicorn-0.41.0-py3-none-any.whl.metadata (6.7 kB)
+2026-02-25T06:52:59.8449115Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.11.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:52:59.8494938Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-02-25T06:53:00.4680307Z Collecting pydantic-core==2.41.5 (from pydantic<3.0.0,>=2.11.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.4722865Z   Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-02-25T06:53:00.4920069Z Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.4959395Z   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-02-25T06:53:00.5089086Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.5127723Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-02-25T06:53:00.5334874Z Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.5375225Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-02-25T06:53:00.8216490Z Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.8256939Z   Downloading rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-02-25T06:53:00.8446880Z Collecting python-dotenv>=1.0.0 (from mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.8486011Z   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+2026-02-25T06:53:00.8670749Z Collecting typer>=0.16.0 (from mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:00.8707333Z   Downloading typer-0.24.1-py3-none-any.whl.metadata (16 kB)
+2026-02-25T06:53:01.0447722Z Collecting cryptography>=3.4.0 (from pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.0488218Z   Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+2026-02-25T06:53:01.2109634Z Collecting cffi>=2.0.0 (from cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.2151861Z   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-02-25T06:53:01.2279789Z Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp>=1.14.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.2317543Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-02-25T06:53:01.2548527Z Collecting shellingham>=1.3.0 (from typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.2586864Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-02-25T06:53:01.2888643Z Collecting rich>=12.3.0 (from typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.2929645Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+2026-02-25T06:53:01.3041109Z Collecting annotated-doc>=0.0.2 (from typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.3078684Z   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-02-25T06:53:01.3237980Z Collecting markdown-it-py>=2.2.0 (from rich>=12.3.0->typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.3275184Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-02-25T06:53:01.3332566Z Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from rich>=12.3.0->typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0) (2.19.2)
+2026-02-25T06:53:01.3422000Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.3.0->typer>=0.16.0->mcp[cli]>=1.14.0->YA_MCPServer_YourTeam==0.1.0)
+2026-02-25T06:53:01.3459733Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-02-25T06:53:01.3601567Z Downloading art-6.5-py3-none-any.whl (610 kB)
+2026-02-25T06:53:01.3727915Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 610.4/610.4 kB 44.9 MB/s  0:00:00
+2026-02-25T06:53:01.3764913Z Downloading colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-02-25T06:53:01.3823313Z Downloading mcp-1.26.0-py3-none-any.whl (233 kB)
+2026-02-25T06:53:01.3896656Z Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-02-25T06:53:01.3993621Z Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-02-25T06:53:01.4204700Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 100.5 MB/s  0:00:00
+2026-02-25T06:53:01.4244099Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-02-25T06:53:01.4300964Z Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+2026-02-25T06:53:01.4363076Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-02-25T06:53:01.4423025Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-02-25T06:53:01.4481024Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-02-25T06:53:01.4539409Z Downloading pydantic_settings-2.13.1-py3-none-any.whl (58 kB)
+2026-02-25T06:53:01.4596179Z Downloading pyjwt-2.11.0-py3-none-any.whl (28 kB)
+2026-02-25T06:53:01.4651307Z Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+2026-02-25T06:53:01.4971361Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 147.1 MB/s  0:00:00
+2026-02-25T06:53:01.5015634Z Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+2026-02-25T06:53:01.5084071Z Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+2026-02-25T06:53:01.5144218Z Downloading python_multipart-0.0.22-py3-none-any.whl (24 kB)
+2026-02-25T06:53:01.5208439Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-02-25T06:53:01.5291315Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 99.6 MB/s  0:00:00
+2026-02-25T06:53:01.5330873Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-02-25T06:53:01.5389205Z Downloading rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-02-25T06:53:01.5468030Z Downloading ruff-0.15.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.1 MB)
+2026-02-25T06:53:01.6010237Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 210.6 MB/s  0:00:00
+2026-02-25T06:53:01.6053456Z Downloading sse_starlette-3.2.0-py3-none-any.whl (12 kB)
+2026-02-25T06:53:01.6110877Z Downloading starlette-0.52.1-py3-none-any.whl (74 kB)
+2026-02-25T06:53:01.6168669Z Downloading typer-0.24.1-py3-none-any.whl (56 kB)
+2026-02-25T06:53:01.6225591Z Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-02-25T06:53:01.6281663Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+2026-02-25T06:53:01.6348244Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-02-25T06:53:01.6409368Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-02-25T06:53:01.6466892Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-02-25T06:53:01.6521344Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-02-25T06:53:01.6578340Z Downloading uvicorn-0.41.0-py3-none-any.whl (68 kB)
+2026-02-25T06:53:01.6638209Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-02-25T06:53:01.7044334Z Building wheels for collected packages: YA_MCPServer_YourTeam
+2026-02-25T06:53:01.7052472Z   Building editable for YA_MCPServer_YourTeam (pyproject.toml): started
+2026-02-25T06:53:01.9004496Z   Building editable for YA_MCPServer_YourTeam (pyproject.toml): finished with status 'done'
+2026-02-25T06:53:01.9011721Z   Created wheel for YA_MCPServer_YourTeam: filename=ya_mcpserver_yourteam-0.1.0-0.editable-py3-none-any.whl size=4179 sha256=7ce4e57577bc43f48d8f46c9852fbee148e3af72152ca69fe4868198c35c5a2f
+2026-02-25T06:53:01.9014622Z   Stored in directory: /tmp/pip-ephem-wheel-cache-y5epbpy4/wheels/2b/32/2c/7b67cebd2797dd89bb1d1d1ec4fe1a9288c98faa5dfd9a3f78
+2026-02-25T06:53:01.9028703Z Successfully built YA_MCPServer_YourTeam
+2026-02-25T06:53:01.9621244Z Installing collected packages: uvicorn, typing-inspection, shellingham, ruff, rpds-py, pyyaml, python-multipart, python-dotenv, pyjwt, pydantic-core, pycparser, mdurl, httpx-sse, colorlog, attrs, art, annotated-types, annotated-doc, starlette, referencing, pydantic, markdown-it-py, cffi, sse-starlette, rich, pydantic-settings, jsonschema-specifications, cryptography, typer, jsonschema, mcp, YA_MCPServer_YourTeam
+2026-02-25T06:53:03.8595778Z 
+2026-02-25T06:53:03.8622928Z Successfully installed YA_MCPServer_YourTeam-0.1.0 annotated-doc-0.0.4 annotated-types-0.7.0 art-6.5 attrs-25.4.0 cffi-2.0.0 colorlog-6.10.1 cryptography-46.0.5 httpx-sse-0.4.3 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markdown-it-py-4.0.0 mcp-1.26.0 mdurl-0.1.2 pycparser-3.0 pydantic-2.12.5 pydantic-core-2.41.5 pydantic-settings-2.13.1 pyjwt-2.11.0 python-dotenv-1.2.1 python-multipart-0.0.22 pyyaml-6.0.3 referencing-0.37.0 rich-14.3.3 rpds-py-0.30.0 ruff-0.15.2 shellingham-1.5.4 sse-starlette-3.2.0 starlette-0.52.1 typer-0.24.1 typing-inspection-0.4.2 uvicorn-0.41.0

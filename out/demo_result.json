@@ -1,0 +1,17 @@
+{
+  "answer": "演示回答：这是一个由本地 mock Deepseek 生成的回答。",
+  "citations": [],
+  "debug": {
+    "providers_called": [
+      "local_provider",
+      "web_wiki",
+      "web_wikipedia"
+    ],
+    "provider_times_ms": {
+      "local_provider": 450,
+      "web_wiki": 450,
+      "web_wikipedia": 869
+    },
+    "deepseek_time_ms": 0
+  }
+}
