@@ -1,7 +1,94 @@
 {
   "items": [
-    {"id": 1, "title": "示例条目 1", "value": 10},
-    {"id": 2, "title": "示例条目 2", "value": 20},
-    {"id": 3, "title": "示例条目 3", "value": 30}
+    {
+      "id": "ml-001",
+      "title": "Artificial Intelligence (AI)",
+      "text": "Artificial Intelligence (AI) is a major branch of computer science dedicated to creating systems capable of performing tasks that typically require human intelligence. These tasks include visual perception, speech recognition, decision-making, and language translation. Historically, AI has evolved from early symbolic logic and expert systems (relying on hard-coded rules) to modern data-driven approaches. Currently, AI is categorized into Narrow AI (focused on specific tasks, like all current systems) and General AI (possessing comprehensive human-like cognitive abilities, which remains theoretical). The rapid development of modern AI is primarily attributed to its core subfield, machine learning—specifically breakthroughs in deep learning—along with the availability of massive datasets and high-performance computing hardware such as GPUs. As a general-purpose technology, AI is profoundly transforming various industries including healthcare, finance, and transportation.",
+      "metadata": {"category": "Foundational Concepts"}
+    },
+    {
+      "id": "ml-002",
+      "title": "Machine Learning (ML)",
+      "text": "Machine Learning (ML) is a core subfield of AI that empowers computer systems with the ability to learn and improve from experience without being explicitly programmed. While traditional software engineering requires developers to write detailed rules and logic, ML is based on statistical theory, discovery latent patterns and regularities in data by providing algorithms with large datasets. ML primarily consists of three paradigms: supervised learning (training with labeled data), unsupervised learning (finding hidden structures in unlabeled data), and reinforcement learning (optimizing strategies through rewards or penalties from environmental interaction). From simple linear regression and decision trees to complex Support Vector Machines (SVM) and artificial neural networks, ML algorithms are the foundation of modern data mining, predictive analysis, and automated decision-making systems.",
+      "metadata": {"category": "Foundational Concepts"}
+    },
+    {
+      "id": "ml-003",
+      "title": "Deep Learning (DL)",
+      "text": "Deep Learning (DL) is a highly specialized subset of machine learning whose core architecture is based on artificial neural networks with multiple hidden layers (i.e., 'depth'). While traditional ML algorithms often require 'feature engineering' (manual extraction of key features by experts), DL uses its deep network structure to automatically perform representation learning from raw unstructured data (such as pixels, audio waveforms, and text strings), extracting abstract features layer by layer from low to high levels. DL exhibits superior performance when processing high-dimensional data, directly driving breakthroughs in computer vision, natural language processing, and speech recognition. Current mainstream DL architectures include Convolutional Neural Networks (CNN) for image processing, Recurrent Neural Networks (RNN) for sequential data, and the Transformer architecture that dominates the era of large models.",
+      "metadata": {"category": "Foundational Concepts"}
+    },
+    {
+      "id": "ml-004",
+      "title": "Artificial Neural Network (ANN)",
+      "text": "An Artificial Neural Network (ANN) is a computational model inspired by the biological neural networks of the brain and serves as the fundamental underlying architecture for deep learning systems. A typical ANN consists of interconnected computing units called artificial neurons or nodes, organized into different layers: an input layer to receive data, one or more hidden layers to process information, and an output layer to produce final predictions. The connections between nodes carry numerical parameters called 'weights,' representing signal strength. During training, the network calculates output through forward propagation and evaluates the error against the target using a loss function. Subsequently, the system utilizes the backpropagation algorithm and gradient descent optimizers to continuously fine-tune the weights, minimizing error. This mechanism allows ANNs to approximate highly complex non-linear functions.",
+      "metadata": {"category": "Network Architecture"}
+    },
+    {
+      "id": "ml-005",
+      "title": "Convolutional Neural Network (CNN)",
+      "text": "A Convolutional Neural Network (CNN) is a class of deep feedforward neural networks specifically designed to process data with a grid-like topology, most typically image pixel matrices. Unlike fully connected networks, CNNs introduce convolutional layers and pooling layers (downsampling layers). Convolutional layers use a series of learnable filters (kernels) that slide across the input data to perform convolution operations, efficiently capturing local spatial features like edges, textures, and shapes while maintaining translation invariance. Pooling layers serve to reduce the spatial dimensions of feature maps, thereby decreasing parameter count and computation while controlling overfitting. Due to their ability to preserve spatial hierarchies, CNNs have become the absolute standard in computer vision, widely used in image classification, object detection (e.g., YOLO, Faster R-CNN), image segmentation, and facial recognition.",
+      "metadata": {"category": "Network Architecture"}
+    },
+    {
+      "id": "ml-006",
+      "title": "Recurrent Neural Network (RNN)",
+      "text": "A Recurrent Neural Network (RNN) is a deep learning architecture specifically designed for processing sequential data, including time series, audio signals, and natural language text. In traditional neural networks, inputs are assumed to be independent; however, RNN neurons contain recurrent connections that allow the processing results of previous steps (hidden states) to serve as part of the input for the current step. This design grants RNNs a form of short-term 'memory,' enabling them to capture temporal dependencies and contextual information. However, standard RNNs face severe 'gradient vanishing' or 'gradient explosion' issues when processing long sequences, making it difficult to learn long-distance dependencies. To address this, researchers developed variants such as Long Short-Term Memory (LSTM) and Gated Recurrent Units (GRU). Although RNNs once dominated NLP, they are increasingly being replaced by Transformer models due to poor computational parallelism.",
+      "metadata": {"category": "Network Architecture"}
+    },
+    {
+      "id": "ml-007",
+      "title": "Transformer Model",
+      "text": "The Transformer model is a deep learning architecture proposed by Google researchers in the 2017 paper 'Attention Is All You Need,' which revolutionized natural language processing and the broader AI field. Unlike RNNs that process sequence elements sequentially, the Transformer completely abandons recurrent structures in favor of a 'Self-Attention' mechanism. This mechanism allows the model to focus on all other words in an input sequence simultaneously while processing a specific word, capturing global context and long-range dependencies extremely efficiently. This highly parallelizable nature not only significantly shortens training time but also enables the training of ultra-large models with hundreds of billions of parameters using massive datasets on supercomputers. The Transformer architecture is now the core foundation of all modern Large Language Models (LLMs) such as BERT and the GPT series.",
+      "metadata": {"category": "Network Architecture"}
+    },
+    {
+      "id": "ml-008",
+      "title": "Large Language Model (LLM)",
+      "text": "A Large Language Model (LLM) refers to an ultra-scale deep learning model containing hundreds of millions to trillions of parameters, built on the Transformer architecture. They function by performing unsupervised (or self-supervised) pre-training on massive and diverse internet text corpora, with the core goal of predicting the next word in a sequence. Through this large-scale brute-force computation, LLMs not only learn grammar and vocabulary but also internalize vast factual knowledge and complex reasoning patterns, exhibiting stunning 'Emergent Abilities' such as zero-shot learning and in-context learning. Following pre-training, techniques like Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF) are used for 'alignment,' ensuring outputs meet human preferences and remain safe and helpful. ChatGPT and Claude are representative applications based on LLMs.",
+      "metadata": {"category": "Frontier Concepts"}
+    },
+    {
+      "id": "ml-009",
+      "title": "Generative Artificial Intelligence (Generative AI)",
+      "text": "Generative AI is a significant branch of artificial intelligence focused on creating entirely new, high-quality content—including text, images, audio, video, and software code—based on user prompts. Unlike traditional discriminative AI (primarily used for classification, prediction, or detection), generative AI models learn the underlying joint probability distribution of the training data. In the text domain, LLMs based on the Transformer architecture dominate generative AI; in the image domain, Diffusion Models (e.g., Midjourney, Stable Diffusion) and Generative Adversarial Networks (GAN) are mainstream. Generative AI has drastically lowered the threshold for content creation, profoundly impacting industries like artistic design, programming assistance, and customer service, while also bringing severe ethical challenges regarding copyright, deepfakes, and information authenticity.",
+      "metadata": {"category": "Frontier Concepts"}
+    },
+    {
+      "id": "ml-010",
+      "title": "Natural Language Processing (NLP)",
+      "text": "Natural Language Processing (NLP) is an interdisciplinary field of computer science, AI, and linguistics aimed at enabling computers to understand, interpret, manipulate, and generate human language. NLP covers a wide range of tasks such as part-of-speech tagging, syntactic analysis, machine translation, sentiment analysis, text summarization, and question-answering systems. Historically, NLP has evolved from rule-based and expert systems to statistical machine learning methods (like Hidden Markov Models), and finally to deep learning. Particularly in recent years, with the introduction of word embeddings, the Transformer architecture, and the explosion of LLMs, NLP systems have moved beyond traditional local semantic understanding to achieve deep interaction with high context-awareness and human-like language styles, becoming one of the most active and disruptive fields in AI.",
+      "metadata": {"category": "Application Fields"}
+    },
+    {
+      "id": "ml-011",
+      "title": "Computer Vision (CV)",
+      "text": "Computer Vision (CV) is a vital application area of AI aimed at giving computers the ability to perceive, analyze, and understand digital images or video streams much like the human visual system. Its core goal is to extract high-level abstract semantic information from multi-dimensional visual inputs. Core CV tasks include image classification, object detection, image segmentation, pose estimation, and facial recognition. Over the past decade, the emergence of deep learning—specifically CNNs—has revolutionized CV, replacing traditional manual feature extraction methods (like SIFT, HOG). Recently, the Transformer architecture from NLP has been successfully adapted for CV (Vision Transformer, ViT), achieving state-of-the-art results across various tasks and seeing wide application in autonomous driving, medical imaging diagnosis, and industrial defect detection.",
+      "metadata": {"category": "Application Fields"}
+    },
+    {
+      "id": "ml-012",
+      "title": "Supervised Learning",
+      "text": "Supervised learning is the most common and mature paradigm in machine learning. In this mode, algorithms are trained using datasets that contain human-provided 'labels' or known outcomes. The model receives input feature vectors and attempts to predict the corresponding output labels. During training, the system compares its predicted output with the true labels and uses optimization algorithms (like gradient descent) to continuously adjust internal parameters until the model can map inputs to outputs with high precision. Once trained, the model can generalize predictions on new, unseen data. Supervised learning primarily addresses two types of problems: classification (predicting discrete category labels, like identifying spam or malignant tumors) and regression (predicting continuous numerical values, like forecasting house prices based on area and location).",
+      "metadata": {"category": "Learning Paradigms"}
+    },
+    {
+      "id": "ml-013",
+      "title": "Unsupervised Learning",
+      "text": "Unsupervised learning is a machine learning paradigm that differs fundamentally from supervised learning by using training datasets that lack any human-marked labels or known results. The model is given an unorganized set of data and tasked with autonomously exploring and discovering hidden structures, patterns, or regularities within it. Unsupervised learning is mainly used for three types of tasks: clustering (grouping similar data points together, such as K-means for customer segmentation), association rule learning (discovering interesting relationships between variables, such as 'people who buy diapers also buy beer'), and dimensionality reduction (reducing the number of random variables while preserving major data features, such as PCA). The self-supervised learning used in the pre-training stage of modern LLMs is essentially a massive-scale variant of unsupervised learning.",
+      "metadata": {"category": "Learning Paradigms"}
+    },
+    {
+      "id": "ml-014",
+      "title": "Backpropagation and Gradient Descent",
+      "text": "Backpropagation and gradient descent are the two core mathematical engines for training modern deep neural networks, working in tandem. Gradient descent is a first-order iterative optimization algorithm, often compared to a person trying to find the bottom of a valley while blindfolded (finding the global or local minimum of a loss function). It calculates the partial derivatives (gradients) of the loss function regarding model parameters to indicate which direction to update weights to reduce error most quickly. Backpropagation is the cornerstone for efficiently calculating these complex gradients. It skillfully applies the chain rule of calculus, starting from the last layer (output) and passing the error signal backward through the network to calculate each neuron's contribution to the final error. This combination allows models with billions of parameters to converge and learn.",
+      "metadata": {"category": "Optimization Algorithms"}
+    },
+    {
+      "id": "ml-015",
+      "title": "Overfitting and Underfitting",
+      "text": "Overfitting and underfitting describe the core challenges to a machine learning model's generalization ability, reflecting the Bias-Variance Tradeoff. Underfitting (high bias) occurs when a model is too simple or insufficiently trained to capture the true patterns and non-linear relationships in data, resulting in poor performance on both training and test sets. Conversely, overfitting (high variance) is a more common issue in deep learning. When a model is too complex (too many parameters) and training data is insufficient, the model may 'memorize' the training data, treating random noise and specific details as general rules. This leads to extremely high accuracy on training data but a sharp decline in predictive power on new data. Engineers typically combat overfitting by increasing training data, introducing regularization (L1/L2, Dropout), using Early Stopping, or reducing model complexity.",
+      "metadata": {"category": "Model Evaluation"}
+    }
   ]
 }
