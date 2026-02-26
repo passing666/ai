@@ -20,11 +20,7 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
         return []
 
     url = "http://export.arxiv.org/api/query"
-    params = {
-        "search_query": f"all:{q}",
-        "start": 0,
-        "max_results": limit
-    }
+    params = {"search_query": f"all:{q}", "start": 0, "max_results": limit}
 
     try:
         headers = {
@@ -43,9 +39,9 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
         print(f"Error parsing arXiv XML: {e}")
         return []
 
-    ns = {'atom': 'http://www.w3.org/2005/Atom'}
-    
-    entries = root.findall('atom:entry', ns)
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
+
+    entries = root.findall("atom:entry", ns)
     if not entries:
         return []
 
@@ -59,25 +55,27 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
             return found.text if (found is not None and found.text) else ""
 
         # 安全提取
-        title = get_node_text(entry, 'atom:title')
-        title = re.sub(r'\s+', ' ', title).strip()
-        
-        summary = get_node_text(entry, 'atom:summary')
-        summary = re.sub(r'\s+', ' ', summary).strip()
-        
-        paper_id_url = get_node_text(entry, 'atom:id').strip()
-        
+        title = get_node_text(entry, "atom:title")
+        title = re.sub(r"\s+", " ", title).strip()
+
+        summary = get_node_text(entry, "atom:summary")
+        summary = re.sub(r"\s+", " ", summary).strip()
+
+        paper_id_url = get_node_text(entry, "atom:id").strip()
+
         if not paper_id_url:
             continue
 
-        paper_id = paper_id_url.split('/')[-1]
+        paper_id = paper_id_url.split("/")[-1]
 
-        valid_items.append({
-            "id": paper_id,
-            "title": title,
-            "text": summary,
-            "source_url": paper_id_url
-        })
+        valid_items.append(
+            {
+                "id": paper_id,
+                "title": title,
+                "text": summary,
+                "source_url": paper_id_url,
+            }
+        )
         combined_texts.append(f"{title} {summary}")
 
     scores = calculate_normalized_scores(q, combined_texts)
@@ -86,18 +84,17 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
     for i, score in enumerate(scores):
         if score <= 0:
             continue
-            
+
         item = valid_items[i]
-        
+
         doc = {
             "id": f"arxiv:{item['id']}",
             "title": item["title"],
-            "text": item["text"][:2000], # 限制长度
-            "score": min( 1, score * 1.3 ),
+            "text": item["text"][:2000],  # 限制长度
+            "score": min(1, score * 1.3),
             "provider": "arxiv",
             "source_url": item["source_url"],
-            "metadata": {
-            }
+            "metadata": {},
         }
         results.append(doc)
 

@@ -1,6 +1,7 @@
 import urllib.parse
 import re
 from typing import List, Dict, Any
+
 try:
     from ..algo.Evaluation import calculate_normalized_scores
 except (ImportError, ValueError):
@@ -24,7 +25,7 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
         "srsearch": q,
         "format": "json",
         "utf8": 1,
-        "srlimit": limit
+        "srlimit": limit,
     }
 
     try:
@@ -48,13 +49,11 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
     for item in search_results:
         title = item.get("title", "")
         raw_snippet = item.get("snippet", "")
-        clean_text = re.sub(r'<[^>]+>', '', raw_snippet)
-        
-        valid_items.append({
-            "pageid": item.get("pageid"),
-            "title": title,
-            "text": clean_text
-        })
+        clean_text = re.sub(r"<[^>]+>", "", raw_snippet)
+
+        valid_items.append(
+            {"pageid": item.get("pageid"), "title": title, "text": clean_text}
+        )
         combined_texts.append(title + " " + clean_text)
 
     scores = calculate_normalized_scores(q, combined_texts)
@@ -63,13 +62,13 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
     for i, score in enumerate(scores):
         if score <= 0:
             continue
-            
+
         item = valid_items[i]
         title = item["title"]
-        
+
         # 2. 修改原始来源 URL 为英文版地址
         source_url = f"https://en.wikipedia.org/wiki/{urllib.parse.quote(title)}"
-        
+
         doc = {
             "id": f"web_wiki:{item['pageid']}",
             "title": title,
@@ -77,7 +76,7 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
             "score": score,
             "provider": "web_wiki",
             "source_url": source_url,
-            "metadata": {}
+            "metadata": {},
         }
         results.append(doc)
 

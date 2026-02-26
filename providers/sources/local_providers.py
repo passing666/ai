@@ -10,6 +10,7 @@ except (ImportError, ValueError):
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(CURRENT_DIR, "..", "..", "resources", "sample_data.json")
 
+
 def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
     if not os.path.exists(DATA_FILE):
         print(f"Error: file not found at {DATA_FILE}")
@@ -35,12 +36,13 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
 
     valid_items = []
     combined_texts = []
-    
+
     for item in items_list:
-        if not isinstance(item, dict): continue
+        if not isinstance(item, dict):
+            continue
         title = item.get("title", "")
         text = item.get("text", "")
-        
+
         valid_items.append(item)
         combined_texts.append(f"{title} {text}")
 
@@ -50,16 +52,16 @@ def search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
     for i, score in enumerate(scores):
         if score <= 0:
             continue
-            
+
         item = valid_items[i]
         doc = {
             "id": f"local:{item.get('id', '')}",
             "title": item.get("title", ""),
             "text": item.get("text", "")[:2000],
-            "score": min( 1, score * 1.5 ),
+            "score": min(1, score * 1.5),
             "provider": "local",
             "source_url": None,
-            "metadata": item.get("metadata", {})
+            "metadata": item.get("metadata", {}),
         }
         results.append(doc)
 

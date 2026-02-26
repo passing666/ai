@@ -26,12 +26,14 @@ AVAILABLE_PROVIDERS: Dict[str, Callable[[str, int], List[Dict[str, Any]]]] = {
 # Enabled providers (order matters for deterministic results)
 ENABLED_PROVIDER_NAMES = ["local", "web_wiki", "web_arVix"]
 
+
 def get_enabled_providers() -> Dict[str, Callable[[str, int], List[Dict[str, Any]]]]:
     enabled_providers: Dict[str, Callable[[str, int], List[Dict[str, Any]]]] = {}
     for name in ENABLED_PROVIDER_NAMES:
         if name in AVAILABLE_PROVIDERS:
             enabled_providers[name] = AVAILABLE_PROVIDERS[name]
     return enabled_providers
+
 
 def unified_search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
     """Run enabled providers' `search` and return merged, scored results.
@@ -58,6 +60,7 @@ def unified_search(q: str, limit: int = 10) -> List[Dict[str, Any]]:
 
     all_results.sort(key=lambda x: x.get("score", 0), reverse=True)
     return all_results[:limit]
+
 
 __all__ = [
     "AVAILABLE_PROVIDERS",

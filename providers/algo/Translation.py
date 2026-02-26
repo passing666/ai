@@ -1,6 +1,7 @@
 import requests
 import urllib.parse
 
+
 def translate_to_english(text: str) -> str:
     try:
         encoded_text = urllib.parse.quote(text)
